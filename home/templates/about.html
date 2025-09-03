@@ -1,0 +1,417 @@
+{% extends 'base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}" />
+{% endblock %} {% block body %}
+<section class="p-0 parallax overlap-height">
+  <div class="lqd-vbg-wrap">
+    <div class="lqd-vbg-inner">
+      <span class="lqd-vbg-loader"></span>
+      <div class="inline-YTPlayer" style="position: relative; max-width: 100%">
+        <div
+          id="wrapper_YTP_1742270005228"
+          class="mbYTP_wrapper"
+          style="
+            position: absolute;
+            z-index: 0;
+            min-width: 100%;
+            min-height: 100%;
+            left: 0px;
+            top: 0px;
+            overflow: hidden;
+            opacity: 1;
+            background-image: none;
+            transition-duration: 1000ms;
+          "
+        >
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            class="h-full w-full background-video background-video1"
+            id="player"
+          >
+            <source
+              src="https://d1ytpjko2pk6h2.cloudfront.net/DMLS+Printing.webm"
+              type="video/webm"
+            />
+            <source
+              src="https://d1ytpjko2pk6h2.cloudfront.net/DMLS+Printing.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <div
+            class="YTPOverlay"
+            style="
+              position: absolute;
+              top: 0px;
+              width: 100%;
+              height: 100%;
+              cursor: pointer;
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="opacity-full bg-gradient-fast-blue-purple"></div>
+  <div class="container position-relative">
+    <div class="row full-screen md-landscape-h-600px" style="height: 600px">
+      <div
+        class="col-12 col-xl-5 col-lg-6 col-md-7 col-sm-10 d-flex flex-column justify-content-center"
+      >
+        <h1 class="video-title">About Us</h1>
+        <div
+          class="alt-font text-large font-weight-500 text-uppercase letter-spacing-2px d-flex"
+        >
+          <span
+            class="flex-sharink-0 w-40px h-1px bg-white opacity-6 align-self-center margin-25px-right"
+          ></span>
+          <span class="flex-grow-1 video-desc opacity-6">
+            What we are? Know more about us.
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% comment %}
+<section class="p-0 parallax overlap-height">
+  <div class="lqd-vbg-wrap">
+    <div class="lqd-vbg-inner">
+      <span class="lqd-vbg-loader"></span>
+      <div class="inline-YTPlayer" style="position: relative; max-width: 100%">
+        <div
+          id="wrapper_YTP_1742270005228"
+          class="mbYTP_wrapper"
+          style="
+            position: absolute;
+            z-index: 0;
+            min-width: 100%;
+            min-height: 100%;
+            left: 0px;
+            top: 0px;
+            overflow: hidden;
+            opacity: 1;
+            background-image: none;
+            transition-duration: 1000ms;
+          "
+        >
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            class="h-full w-full background-video background-video1"
+            id="player"
+          >
+            <source
+              src="https://d1ytpjko2pk6h2.cloudfront.net/DMLS+Printing.webm"
+              type="video/webm"
+            />
+            <source
+              src="https://d1ytpjko2pk6h2.cloudfront.net/DMLS+Printing.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <div
+            class="YTPOverlay"
+            style="
+              position: absolute;
+              top: 0px;
+              width: 100%;
+              height: 100%;
+              cursor: pointer;
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endcomment %}
+<section class="trusted-dental-lab space-section">
+  <div class="container">
+    <div class="row about-container">
+      <div class="col-12 col-md-6 col-lg-6">
+        <div class="images-home-section">
+          <div class="image-top text-center">
+            <img
+              src="{% static '/img/about-ace.webp' %}"
+              alt="about"
+              width="310"
+              height="200"
+              class="img-fluid"
+            />
+          </div>
+          <div class="image-bottom">
+            <img
+              src="{% static '/img/dental-ace.webp' %}"
+              alt="about1"
+              width="300"
+              height="200"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-6">
+        <div class="about-text">
+          <h2
+            class="main-heading-with-double-color mt-0 mb-2 heading1"
+            style="width: 69%"
+          >
+            Your Trusted
+            <span class="highlight-text1"> Dental Lab </span> for All Your
+            Clinical Needs
+          </h2>
+          <p>
+            ADDL collaborates with a network of highly reputable, certified
+            laboratories across USA to deliver premium-quality dental
+            restorations. Our commitment to precision, innovation, and
+            excellence ensures that your practice receives superior dental lab
+            solutions tailored to meet your clinical requirements.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="certification">
+  <div class="certification-section">
+    <div class="container d-flex">
+      <div class="certification-overlay">
+        <div class="certification-content text-start col-12">
+          Our partnership exclusively involves FDA-verified dental labs that
+          offer exceptional quality and value. This ensures that you receive
+          restorations that meet the latest industry standards while maintaining
+          superior precision and reliability.
+        </div>
+        <a href="/contact-us">
+          <button class="btn btn-getInTouch">Get In Touch</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="about-map">
+  <div class="container">
+    <div class="row d-flex align-items-center">
+      <div class="col-md-7 col-12">
+        <div class="about-images">
+          <img
+            src="{% static '/img/map.webp' %}"
+            alt="about"
+            width="550"
+            height="400"
+            class="img-fluid"
+          />
+        </div>
+      </div>
+      <div class="col-md-5 col-12 mt-1 mt-sm-0">
+        <div class="about-text">
+          <h2 class="main-heading-with-double-color heading1 mb-2">
+            Delivering Excellence
+            <span class="highlight-text1"> Across The USA </span>
+          </h2>
+          <p>
+            At ADDL, we provide dental professionals across the USA with
+            premium-quality products, ensuring precision, reliability, and
+            superior patient outcomes. Our efficient distribution network
+            guarantees timely delivery nationwide, while our dedicated support
+            team ensures a seamless experience from order to delivery.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="working-with-the-best">
+  <div class="container about-section">
+    <div class="row">
+      <div class="col-12 col-lg-6 about-left">
+        <div class="about-text w-40 ps-0">
+          <h2 class="main-heading-with-double-color mt-0 mb-0 heading1">
+            Working Only With
+            <span class="highlight-text1">The Best</span>
+          </h2>
+        </div>
+        <img
+          src="{% static '/img/vector.webp' %}"
+          alt="Dental Vector"
+          width="300"
+          height="200"
+          class="about-vector-image img-fluid"
+        /> 
+        <div class="about-text about-content0">
+          <p>
+            Our laboratories utilize a diverse range of modern dental materials,
+            including Zirconia, Titanium, and high-quality non-precious metal
+            alloys, ensuring optimal strength, aesthetics, and biocompatibility.
+            Whether crafting single crowns, full-arch rehabilitations, or
+            complex implant restorations, we deliver precision-engineered
+            solutions with a perfect fit and exceptional quality.
+          </p>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6 d-flex flex-column">
+        <div class="about-content col-12 order-2 order-sm-2 order-lg-0">
+          <p style="margin-top: 10px">
+            At ADDL, we collaborate with a team of certified, highly skilled,
+            and experienced dental technicians who have undergone extensive
+            training in the design and fabrication of all types of dental
+            restorations.Our commitment to precision and excellence is reflected
+            in our fully digital workflow, which integrates cutting-edge CAD/CAM
+            technology, advanced milling, and state-of-the-art sintering
+            processes.
+          </p>
+        </div>
+        <div class="about-video col-12 order-0 order-lg-2 order-sm-0">
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            class="h-full w-full background-video"
+            id="player"
+          >
+            <source
+              src="https://d1ytpjko2pk6h2.cloudfront.net/Fmr.mp4"
+              type="video/webm"
+            />
+            <source
+              src="https://d1ytpjko2pk6h2.cloudfront.net/Fmr.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-overlay1"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="boss-work">
+  <img
+    src="{% static '/img/bosswithtxt.webp' %} "
+    alt="Lab Technician Working"
+    width="800"
+    height="600"
+    class="img-fluid bossimagestxt"
+  />
+  <div class="container">
+    <div class="about-section d-flex align-items-center">
+      <div class="row" style="margin: 0px">
+        <div
+          class="col-lg-7 col-12 card-wop position-relative d-flex justify-content-center text-aligns-center pt-2 pb-3"
+        >
+          <img
+            src="{% static '/img/Boss.JPG' %}"
+            alt="Lab Technician Working"
+            width="800"
+            height="600"
+            class="img-fluid bossimage"
+          />
+          <div class="top-0 start-0 w-100 h-100 overlays-img"></div>
+        </div>
+
+        <div class="col-lg-5 col-12 card-wop right-card">
+          <div class="about-text">
+            <h2
+              class="main-heading-with-double-color heading1 mb-0 bosstxt"
+              style="width: 85%"
+            >
+              <span class="highlight-text1"> Uncompromising Precision </span>
+              and <span class="highlight-text2">Excellence </span>in Dental
+              Restorations
+            </h2>
+          </div>
+          <div class="about-text">
+            <p class="about-content my-5" style="width: 85%">
+              At ADDL, we blend precision, craftsmanship, and premium materials
+              to create restorations with exceptional aesthetics and a perfect
+              fit. Our expert clinicians conduct rigorous evaluations and
+              quality checks across partnered labs, ensuring superior quality
+              and reliability. This dedication to excellence guarantees
+              restorations that meet the highest clinical and aesthetic
+              standards.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="standard-work pt-2 pt-md-4 pt-sm-4">
+  <img
+    src="{% static '/img/linevec.svg' %}"
+    class="d-none d-md-block ab-vector1 img-fluid"
+    width="1772"
+    height="827"
+    alt="ab-vector1"
+  />
+  <div class="container text-center">
+    <h2
+      class="main-heading-with-double-color heading1 mb-0 text-start ps-2 text-sm-center w-100"
+      style="margin-top: 5px"
+    >
+      Committed to the Highest
+      <span class="highlight-text1"> Standards of Excellence </span>
+    </h2>
+    <div class="row align-items-stretch position-relative">
+      <div
+        class="col-lg-6 d-flex flex-column justify-content-center h-90 order-md-0 order-0 pb-3"
+      >
+        <div class="about-text" style="width: 100%">
+          <p class="about-text-p mb-0">
+            At ADDL, we uphold the highest industry standards by offering a
+            comprehensive range of dental lab solutions, from single crowns to
+            complex restorations. Crafted in FDA-verified and ISO-certified
+            laboratories, our products ensure superior precision, durability,
+            and aesthetics while adhering to the strictest global regulations.
+            Each restoration comes with a Quality Certificate and Guarantee,
+            providing confidence and peace of mind.
+          </p>
+        </div>
+      </div>
+      <div class="col-lg-6 align-items-stretch order-md-1 order-1 mb-sm-3 mb-2">
+        <img
+          src="{% static '/img/abBefore.webp' %}"
+          alt="New Shared Image"
+          width="550"
+          height="600"
+          class="img-fluid w-95 h-95 object-fit-cover custom-image-radius"
+        />
+      </div>
+      <div
+        class="col-lg-6  align-items-stretch order-lg-2 order-md-2 order-0 mb-lg-5 mb-md-3 mb-4 mt-4"
+      >
+        <img
+          src="{% static '/img/abAfter.webp' %}"
+          alt="New Shared Image"
+          width="550"
+          height="600"
+          class="img-fluid w-95 h-95 object-fit-cover custom-image-radius-left"
+        />
+      </div>
+      <div
+        class="col-lg-6 d-flex flex-column justify-content-lg-center justify-content-md-end h-90 order-lg-3 order-md-2 order-2 mb-5 mb-sm-5 mb-md-4 mb-lg-0"
+      > 
+        <div class="about-text">
+          <p>
+            Beyond our commitment to exceptional craftsmanship, we prioritize
+            personalized customer service and transparent communication. Our
+            dedicated team works closely with dental professionals to ensure
+            seamless collaboration, accurate case planning, and on-time
+            delivery. By combining advanced technology with meticulous attention
+            to detail, we strive to enhance patient outcomes, optimize practice
+            efficiency, and build long-term partnerships based on trust and
+            reliability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %} {% block js%} {% endblock %}

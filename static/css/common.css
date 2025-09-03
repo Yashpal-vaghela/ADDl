@@ -1,0 +1,75 @@
+/* ------------------ Product page common css ------------------ */
+.bradcrumb-product {
+  background-image: url("../img/breadcrumb.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+  width: 100%;
+  margin-top: 80px;
+}
+.inner-bread {
+  height: 100%;
+  width: 100%;
+}
+.breadcrumbTitle {
+  background: linear-gradient(135deg, #00478a, #00818a) 0 0 / cover;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: 900;
+}
+.breadcrumbNav {
+  color: #00728a;
+  margin-bottom: 40px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.breadcrumbNav .active {
+  color: #fff;
+  margin-bottom: 40px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.breadcrumbNav .active a{
+    color: #fff;
+    text-decoration: none;
+}
+.breadcrumbNav .breadcrumb-item + .breadcrumb-item:before {
+  color: #fff;
+  padding: 0 8px;
+  content: ">" !important;
+}
+@media (max-width: 576px) {
+  .breadcrumbTitle {
+    font-size: 25px;
+    font-weight: 900;
+  }
+  .breadcrumbNav {
+    margin-bottom: 10px;
+    color: #00728a;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .breadcrumbNav .active {
+    margin-bottom: 10px;
+  }
+  .bradcrumb-product {
+    height: 250px;
+    width: 100%;
+    background-position: centers;
+  }
+}
+
+/* btn css */
+.btn {
+    color: #f0f8ff;
+    background-color: #00478a;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background .3s;
+    display: inline-block;
+}

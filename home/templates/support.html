@@ -1,0 +1,286 @@
+{% extends 'base.html' %} {% load static %}
+{% block css %} 
+<link rel="stylesheet" href="{% static 'css/support.css' %}" />
+{% endblock %} {% block body %}
+<section class="p-0 parallax overlap-height">
+  <div class="lqd-vbg-wrap">
+    <div class="lqd-vbg-inner">
+      <span class="lqd-vbg-loader"></span>
+      <div class="inline-YTPlayer" style="position: relative; max-width: 100%">
+        <div
+          id="wrapper_YTP_1742270005228"
+          class="mbYTP_wrapper"
+          style="
+            position: absolute;
+            z-index: 0;
+            min-width: 100%;
+            min-height: 100%;
+            left: 0px;
+            top: 0px;
+            overflow: hidden;
+            opacity: 1;
+            background-image: none;
+            transition-duration: 1000ms;
+          "
+        >
+          <video
+            autoplay
+            loop
+            muted
+            playsinline
+            class="h-full w-full background-video background-video1"
+            id="player"
+          >
+            <source
+              src="https://d1ytpjko2pk6h2.cloudfront.net/Abutment+Milling.webm"
+              type="video/webm"
+            />
+            <source
+              src="https://d1ytpjko2pk6h2.cloudfront.net/Abutment+Milling.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="opacity-full bg-gradient-fast-blue-purple"></div>
+  <div class="container position-relative">
+    <div class="row full-screen md-landscape-h-600px" style="height: 600px" ;>
+      <div
+        class="col-12 col-xl-5 col-lg-6 col-md-7 col-sm-10 d-flex flex-column justify-content-center"
+      >
+        <h1 class="video-title">Support</h1>
+        <div
+          class="alt-font text-large font-weight-500 text-uppercase letter-spacing-2px d-flex"
+        >
+          <span
+            class="flex-shrink-0 w-40px h-1px bg-white opacity-6 align-self-center margin-25px-right"
+          ></span>
+          <span class="flex-grow-1 video-desc opacity-6">
+            Need Support? We Are with you.
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="first-section" style="padding-top: 120px; paddingbottom: 40px">
+  <div class="black-overlays"></div>
+  <div class="container" style="padding-top: 20px">
+    <div
+      class="row gap-lg-3 gap-md-0 gap-sm-0 gap-2 justify-content-center justify-content-sm-center"
+    >
+      <div
+        class="col-lg-5 col-md-6 col-sm-5 col-11 d-flex flex-column justify-content-end"
+      >
+        <div class="support1-wrapper">
+          <h2>
+            ADDL Support Team Is Always There For You, Whenever You Need Us.
+          </h2>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-6 col-sm-7 col-11">
+        <div class="d-block text-end image-support-card">
+          <p>
+            At ADDL, we believe in quality production, digital technology,and an
+            efficient workflow. That's why our support team is always available
+            to assist you whether it's about your order, product inquiries,
+            pricing, or any business-related questions. We are here whenever you
+            need us.
+          </p>
+          <div class="support-img-card">
+            <img
+              src="{% static 'img/sup1.webp' %}"
+              class="img-fluid support-inner-image"
+              width="250"
+              height="500"
+              alt="support-img5"
+            />
+            <div class="mb-0 fw-bold text-center mt-2" style="color: #005e8a">
+              ACE Digital Dental Lab.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="third-section" >
+  <div class="container position-relative pb-md-3 pb-sm-3 pb-0">
+    <img
+      src="{% static 'img/vector-support6.webp' %}"
+      class="img-fluid vector-support6"
+      alt="vector-support"
+      width="100"
+      height="100"
+    />
+    <div class="row mb-5 justify-content-center align-items-lg-start">
+      <div class="support1-wrapper">
+        <h2 class="support-text" style="color: #005e8a">
+          In a hurry? We've got you covered.
+        </h2>
+      </div>
+
+      <div class="col-lg-6 col-md-6 col-sm-10 col-11">
+        <img
+          src="{% static 'img/support-team-img10.webp' %}"
+          class="support-team-img6 img-fluid"
+          alt="support-team"
+          width="344"
+          height="250"
+        />
+      </div>
+      <div class="col-lg-5 col-md-6 col-sm-10 col-11">
+        <p>
+          Our dedicated support team is committed to ensuring smooth and
+          efficient service, prioritizing time-saving solutions and quick
+          delivery. With a focus on responsiveness and reliability, they work
+          closely with you to meet deadlines and streamline processes, helping
+          to deliver high-quality dental restorations in the shortest possible
+          time. Their expertise ensures that every step is handled with care, so
+          you can rely on fast and efficient results without compromising on
+          quality.
+        </p>
+        <a href="/contact-us/">
+          <button class="btn btn-getInTouch">Get In Touch</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="experience-section position-relative">
+  <img
+    src="{% static 'img/vector-img.webp'%}"
+    class="img-fluid experience-vector"
+    width="2350"
+    height="100"
+    alt="experience-vector"
+  />
+  <div class="container">
+    <div class="row align-items-center mb-5 justify-content-center">
+      <div class="col-lg-7 col-md-7 col-sm-12 col-12">
+        <div class="experience-section-main-content">
+          <h2 class="txt-black">Deep-Rooted Tradition</h2>
+          <div
+            class="d-flex experience-main-content-wrapper gap-4 gap-md-2 justify-content-between"
+          >
+            <div class="d-block">
+              <span class="mb-0 numberborder">14+</span>
+              <div class="txt-black experinece-txt">Years experience.</div>
+            </div>
+            <p class="d-none d-sm-none d-md-block">
+              Our support team brings a wealth of experience and expertise to
+              every interaction, ensuring that you receive the best possible
+              service. With years of industry knowledge, they are equipped to
+              handle any questions or challenges that may arise, providing
+              expert guidance and personalized solutions. Their in-depth
+              understanding of the process allows them to offer valuable
+              insights, ensuring smooth and efficient outcomes. You can count on
+              our team to deliver reliable, professional support that enhances
+              your experience every step of the way.
+            </p>
+          </div>
+        </div>
+        <p class="d-block d-sm-block d-md-none">
+          Our support team brings a wealth of experience and expertise to every
+          interaction, ensuring that you receive the best possible service. With
+          years of industry knowledge, they are equipped to handle any questions
+          or challenges that may arise, providing expert guidance and
+          personalized solutions. Their in-depth understanding of the process
+          allows them to offer valuable insights, ensuring smooth and efficient
+          outcomes. You can count on our team to deliver reliable, professional
+          support that enhances your experience every step of the way.
+        </p>
+      </div>
+      <div
+        class="col-lg-4 col-md-5 col-sm-12 col-12 order-1 order-md-0 position-relative"
+      >
+        <img
+          src="{% static 'img/vector-img.webp'%}"
+          class="img-fluid experience-vector1"
+          width="2350"
+          height="3155"
+          alt="experience-vector"
+        />
+        <img
+          src="{% static 'img/inches.webp'%}"
+          class="inches-img img-fluid"
+          alt="experience-img"
+          width="467"
+          height="637"
+        />
+        <div class="addl-content">
+          <ul>
+            <li>ADDL</li>
+          </ul>
+          <p>ACE</p>
+          <span>
+            Ace Digital <br />
+            Dental Laboratory
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="go-off-track-section">
+  <img
+    src="{% static 'img/vector-support3.webp'%}"
+    class="d-none d-md-block support-vector1 img-fluid"
+    width="1772"
+    height="827"
+    alt="support-vector3"
+  />
+  <img
+    src="{% static 'img/vector-support4.webp'%}"
+    class="d-block d-md-none support-vector1 img-fluid"
+    width="279"
+    height="678"
+    alt="support-vector1"
+  />
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-5 col-md-6 col-10 order-2 order-md-0">
+        <img
+          src="{% static '/img/support-7.webp' %}"
+          class="d-none d-md-block go-off-track-img img-fluid"
+          alt="support-4"
+          width="648"
+          height="648"
+        />
+      </div>
+      <div class="col-lg-6 col-md-6 col-11 order-1 order-md-0">
+        <h2>Did Something Go Off Track?</h2>
+        <p>
+          Our support team is always ready to assist with any changes or
+          customizations to your current order. Whether you need adjustments to
+          the design, materials, or specifications, they work closely with you
+          to ensure your needs are met. With their expertise and attention to
+          detail, they make the process seamless, ensuring that your order is
+          tailored to your exact requirements. You can rely on our team to
+          provide quick, efficient solutions that meet your expectations, all
+          while maintaining the highest quality standards.
+        </p>
+        <img
+          src="{% static 'img/support-7.webp'%}"
+          class="d-block d-md-none go-off-track-img img-fluid"
+          width="648"
+          height="648"
+          alt="go-off-track-img"
+        />
+        <div class="support-img-wrapper">
+          <img
+            src="{% static 'img/support5.webp'%}"
+            alt="support-5"
+            class="support-img img-fluid"
+            width="580"
+            height="265"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %} {% block js %} {% endblock %}

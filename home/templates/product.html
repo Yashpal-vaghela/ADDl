@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/product1.css' %}" />
+{% comment %} <link rel="stylesheet" href="{% static 'css/material.css' %}" /> {% endcomment %}
+{% endblock %}
+{% block body %}
+    <section class="bradcrumb-product" style="margin-top:80px">
+        <div class="container h-100">
+          <div class=" d-flex justify-content-end align-items-start flex-column inner-bread">
+            <h1 class="breadcrumbTitle">Products</h1>
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb text-sm breadcrumbNav">
+                <li class="breadcrumb-item active">
+                  <a href="/">Home</a>
+                </li>
+                <li class="breadcrumb-item ">Products</li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+    </section>
+    <section class="allProduct-content-wrapper Implant-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-sm-12 col-12 allProduct-first">
+              <h2 class="allProduct-title d-block d-md-none">
+                Dental
+                <span> Implant</span> for Teeth
+              </h2>
+              <img
+                src="{% static '/img/all-productImg1.webp' %}"
+                class="allProduct-img1 img-fluid mx-auto"
+                alt="allProduct-img1"
+              ></img>
+            </div>
+            <div class="col-lg-6 col-sm-12 col-12 allProduct-second">
+              <div class="allProduct-main-content">
+                <div class="allProduct-title-wrapper">
+                  <h2 class="allProduct-title d-md-block d-none">
+                    Dental
+                    <span> Implant</span> for Teeth
+                  </h2>
+                  <p class="allProduct-description">
+                    Experience the best dental implants for tooth restoration in
+                    USA. Our premium implant restorations are made of
+                    high-quality materials, which fuse securely with the jawbone
+                    and act as a natural tooth root.
+                  </p>
+                </div>
+                <div class="allProduct-sub-content d-flex">
+                  <div class="d-block">
+                    <h3 class="allProduct-sub-title">Durability :</h3>
+                    <p class="allProduct-sub-description">
+                      Our dental implant prostheses deliver long-term stability,
+                      safeguard jawbone health, and provide lasting support for
+                      confident, effortless chewing.
+                    </p>
+                  </div>
+                  <div class="d-block">
+                    <h3 class="allProduct-sub-title">Aesthetics :</h3>
+                    <p class="allProduct-sub-description">
+                      Our implant prostheses replicate natural tooth color,
+                      shape, and feel, offering unmatched comfort,
+                      functionality, and beautiful esthetics.
+                    </p>
+                  </div>
+                </div>
+                <button class="btn btn-loadMore">
+                  Load More
+                  <img
+                    src="{% static '/img/arrow-btn.svg' %}"
+                    class="btn-arrow-img img-fluid"
+                  ></img>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="allProduct-content-wrapper crown-bridge-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-12 order-2 order-md-1 allProduct-second">
+              <div class="allProduct-main-content">
+                <div class="allProduct-title-wrapper">
+                  <h2 class="allProduct-title d-md-block d-none">
+                    Dental <span>Crown </span>&<span> Bridge</span>
+                  </h2>
+                  <p class="allProduct-description">
+                    Restore smiles with our digitally crafted dental crown and
+                    bridge, designed to repair damaged teeth. We use premium
+                    dental ceramic materials to ensure natural appearance and
+                    long-term durability.
+                  </p>
+                </div>
+                <div class="allProduct-sub-content  d-flex">
+                  <div class="d-block">
+                    <h3 class="allProduct-sub-title">Materials:</h3>
+                    <p class="allProduct-sub-description">
+                      Our crowns offer full coverage, restoring strength,
+                      beauty, and function to damaged teeth using premium
+                      materials like Zirconia and Emax.
+                    </p>
+                  </div>
+                  <div class="d-block">
+                    <h3 class="allProduct-sub-title">Versatility:</h3>
+                    <p class="allProduct-sub-description">
+                      Our bridges fill gaps with natural-looking replacements
+                      while supporting adjacent teeth, maintaining bite
+                      alignment, and long-term stability.
+                    </p>
+                  </div>
+                </div>
+                <button class="btn btn-loadMore">
+                  Load More
+                  <img
+                    src="{% static '/img/arrow-btn.svg' %}"
+                    class="btn-arrow-img img-fluid"
+                  ></img>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 order-1 order-md-2 allProduct-first">
+              <h2 class="allProduct-title d-block d-md-none">
+                Dental <span>Crown </span>&<span> Bridge</span>
+              </h2>
+              <img
+                src="{% static '/img/all-productImg2.webp' %}"
+                class="allProduct-img2 img-fluid mx-auto"
+                alt="allProductImg2"
+              ></img>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="allProduct-content-wrapper emax-veneers-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-12 allProduct-first">
+              <h2 class="allProduct-title d-block d-md-none">
+                Emax Dental <span>Veneers</span>
+              </h2>
+              <img
+                src="{% static '/img/all-productImg3.webp' %}"
+                class="allProduct-img3 img-fluid mx-auto"
+                alt="allProduct-img3"
+              ></img>
+            </div>
+            <div class="col-lg-6 col-12 allProduct-second">
+              <div class="allProduct-main-content">
+                <div class="allProduct-title-wrapper">
+                  <h2 class="allProduct-title d-md-block d-none">
+                    Emax Dental <span>Veneers</span>
+                  </h2>
+                  <p class="allProduct-description">
+                    Transform your smile with our premium Emax dental veneers.
+                    Extremely thin and custom-made from lithium disilicate,
+                    these veneers correct imperfections in the color, shape,
+                    size, and alignment of teeth.
+                  </p>
+                </div>
+                <div class="allProduct-sub-content  d-flex">
+                  <div class="d-block">
+                    <h3 class="allProduct-sub-title">Appearance:</h3>
+                    <p class="allProduct-sub-description">
+                      The high translucency of our Emax veneers mimics natural
+                      enamel, delivering flawless esthetics and a beautifully
+                      enhanced, lifelike smile.
+                    </p>
+                  </div>
+                  <div class="d-block">
+                    <h3 class="allProduct-sub-title">
+                      Minimally Invasive:
+                    </h3>
+                    <p class="allProduct-sub-description">
+                      Our veneers preserve natural tooth health by requiring
+                      minimal preparation, allowing maximum retention of tooth
+                      structure during placement.
+                    </p>
+                  </div>
+                </div>
+                <button class="btn btn-loadMore">
+                  Learn More
+                  <img
+                    src="{% static '/img/arrow-btn.svg' %}"
+                    class="btn-arrow-img img-fluid"
+                  ></img>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+{% endblock %}
+{% block js%}
+{% endblock %}
