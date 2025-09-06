@@ -33,7 +33,7 @@ class Product(models.Model):
 
     product_video_link = models.URLField(blank=True, null=True, help_text="add video link here")
     cta_video = models.FileField(blank=True, null=True, upload_to="videos") 
-    product_image = models.ImageField(blank=True, null=True, upload_to="videos")
+    product_image = models.ImageField(blank=True, null=True, upload_to="product")
     product_image_alt = models.CharField(blank=True, null=True)
 
     why_heading = models.CharField(max_length=255, blank=True, null=True)
