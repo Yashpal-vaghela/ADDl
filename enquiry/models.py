@@ -6,14 +6,16 @@ class Contact(models.Model):
     contact = models.CharField(max_length=150)
     email = models.CharField(max_length=150)
     message = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
 
     def __str__(self):
-        return self.name
+         return f"{self.name} - {self.email}"
 
-class HomeContact(models.Model):
+class ChatEnquiry(models.Model):
     name = models.CharField(max_length=180)
     email = models.CharField(max_length=150)
+    created_at = models.DateTimeField(auto_now_add=True, blank=True, null=True)
 
     def __str__(self):
-        return self.name
+         return f"{self.name} - {self.email}"
            

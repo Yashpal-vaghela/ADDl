@@ -311,16 +311,20 @@ body:has(.offcanvas.show) {
   background-color: #f0f5fb;
   border-radius: 0px 15px 15px;
 }
-.chat-menu:checked + .sticky-button label .chat-icon {
+.chat-menu:checked ~ .sticky-button label .chat-icon {
   display: none;
 }
-.chat-menu:checked + .sticky-button label .close-icon {
+.chat-menu:checked ~ .sticky-button label .close-icon {
   display: table-cell;
 }
-.chat-menu:checked + .sticky-button + .sticky-chat {
+.chat-menu:checked ~ .sticky-button ~ .sticky-chat {
   bottom: 90px;
   opacity: 1;
   visibility: visible;
+}
+.g-recaptcha{
+  display: block !important;
+  visibility: visible !important;
 }
 .custom-input {
   padding: 10px;

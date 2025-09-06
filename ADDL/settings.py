@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'enquiry',
-    'import_export'
+    'import_export',
 ]
 
 MIDDLEWARE = [
@@ -196,6 +196,8 @@ CKEDITOR_CONFIGS = {
         ]),
     }
 }
+RECAPTCHA_SITE_KEY ="6LeBh70rAAAAAJ-phIgjSTKnxU1iY39wOFSNGUlA"
+RECAPTCHA_SECRET_KEY = "6LeBh70rAAAAADZik9ym0glsorZyTXpF0rk3B1h_"
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 

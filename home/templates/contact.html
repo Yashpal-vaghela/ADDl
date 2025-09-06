@@ -162,6 +162,9 @@
                       rows="4"
                       placeholder="Your message (optional)"
                     ></textarea>
+                  </div>
+                  <div class="col-12 mb-4">
+                    <div class="g-recaptcha" data-sitekey="{{ RECAPTCHA_SITE_KEY }}"></div>
                   </div>  
                   <div>
                     <button class="form-btn" type="submit">Submit</button>
@@ -197,7 +200,8 @@
     </div>
 </div>
 {% endblock %} 
-{% block js %} 
+{% block js %}
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
     {% if messages %}

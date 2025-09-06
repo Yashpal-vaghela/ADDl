@@ -116,7 +116,7 @@
     <div class="container">
         <input class="chat-menu hidden" id="offchat-menu" type="checkbox" />
         <div class="sticky-button" id="sticky-button">
-            <label htmlFor="offchat-menu">
+            <label for="offchat-menu">
                 <i class="fa fa-solid fa-message chat-icon"></i>
                 <i class="fa-solid fa-xmark close-icon"></i>
             </label>
@@ -127,6 +127,36 @@
                     <div class="title">Please chat with our team 
                         <span>An admin will respond within a few minutes.</span>
                     </div>
+                </div>
+                <div class="chat-text">
+                    <form class='form row' method="POST" action="{% url 'enquiry:save_chat' %}">
+                        {% csrf_token %}
+                        <div class="mb-3 col-12">
+                            <label for="chatName" class="form-label">Name</label>
+                            <input
+                                type="text"
+                                name="name"
+                                class="form-control custom-input"
+                                id="chatName"
+                                placeholder="Enter Your Name"
+                                required
+                            />
+                        </div>
+                        <div class="mb-3 col-12">
+                            <label for="chatEmail" class="form-label">Email Address</label>
+                            <input 
+                                type="email"
+                                name="email"
+                                class= "form-control custom-input"
+                                id="chatEmail"
+                                placeholder="Enter Your Email Address"
+                                required
+                            />
+                        </div>
+                        <button class="mt-2 btn longbtn col-12" type="submit">
+                            Submit
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -185,5 +215,20 @@
         </div>
     </div>
     {% comment %} <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script> {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      {% if messages %}
+        {% for message in messages %}
+          Swal.fire({
+            icon: '{{ message.tags }}' === 'success' ? 'success' : 'error',
+            title: '{{ message.tags|title }}',
+            text: '{{ message }}',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true
+          });
+        {% endfor %}
+      {% endif %}
+    </script>
     </body>
 </html>

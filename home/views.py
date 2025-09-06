@@ -10,7 +10,9 @@ def about(request):
     return render(request,'about.html')
 
 def contact(request):
-    return render(request,'contact.html')
+    return render(request, 'contact.html', {
+        "RECAPTCHA_SITE_KEY": settings.RECAPTCHA_SITE_KEY
+    })
 
 def support(request):
     return render(request,'support.html')
