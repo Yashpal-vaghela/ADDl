@@ -1,10 +1,359 @@
-{% extends "base.html" %} {% load static %}
-{% block css %}
-{% endblock %}
+{% extends "base.html" %} 
+{% load static %} 
+{% block css %} 
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" as="style">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{% static 'css/home.css'%}"/>
+{% endblock %} 
 {% block body %}
-<div class="main-container">
-Home page
+<div class="main-container overflow-hidden">
+    <section class="p-0 parallax overlap-height">
+        <div class="lqd-vbg-wrap">
+          <div class="lqd-vbg-inner">
+              <span class="lqd-vbg-loader"></span>
+              <div class="inline-YTPlayer"
+                style="position: relative; max-width: 100%"
+              >
+                <div
+                    id="wrapper_YTP_1742270005228"
+                    class="mbYTP_wrapper"
+                    style="
+                    position: absolute;
+                    z-index: 0;
+                    min-width: 100%;
+                    min-height: 100%;
+                    left: 0px;
+                    top: 0px;
+                    overflow: hidden;
+                    opacity: 1;
+                    background-image: none;
+                    transitionduration: 1000ms;
+                    "
+                >
+                    <video
+                    autoplay
+                    loop
+                    muted
+                    playsinline
+                    class="h-full w-full background-video background-video1"
+                    id="player"
+                    >
+                    <source
+                        src="https://d1ytpjko2pk6h2.cloudfront.net/ADVANCE+DENTAL+EXPORT.mp4"
+                        type="video/mp4"
+                    />
+                    Your browser does not support the video tag.
+                    </video>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="opacity-full bg-gradient-fast-blue-purple"></div>
+        <div class="container position-relative">
+        <div class="row full-screen md-landscape-h-600px" style="height: 600px">
+            <div
+              class="col-12 col-xl-5 col-lg-6 col-md-7 col-sm-10 d-flex flex-column justify-content-center"
+            >
+              <span style="color: white">Welcome to</span>
+              <h1 class="video-title">Ace Digital Dental Lab</h1>
+              <div class="text-large font-weight-500 d-flex">
+                  <span
+                  class="flex-shrink-0 w-40px h-1px bg-white opacity-6 align-self-center margin-25px-right"
+                  ></span>
+                  <span class="flex-grow-1 opacity-6 video-desc">
+                  Your Premier Partner for Precision Digital Dental Solutions in USA
+                  </span>
+              </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="About-section position-relative space-section">
+        <div class="container">
+          <div class="row align-items-lg-start justify-content-center">
+            <div class="col-11 col-xl-5 col-md-10 col-lg-6 mt-xl-5  mt-0 position-relative d-flex justify-content-center align-items-center">
+              <img src="{% static '/img/MONA1.webp' %}" class="img-fluid about-img1" alt="Digit Dental Lab Services in USA for Dental Restoration" width="500" height="100"/>
+            </div>
+            <div class="col-11 col-xl-7 col-md-10 col-lg-6 mt-2 mt-md-2 mt-lg-0">
+              <div class="text-left">
+                <div class="hero-subheading mt-xl-5  mt-lg-2 mt-md-1 mt-2">
+                  DNA of Our Modern Dental Laboratory
+                </div>
+                <h2 class="heading1">
+                  Harnessing <span class="highlight-text1">Digital Precision</span>
+                  <br class="d-sm-block d-none"/>& Extreme Care for Every<br class="d-sm-block d-none"/>
+                  <span class="highlight-text2 ">Dental Restoration</span>
+                </h2>
+              </div>
+              <div class="row mt-0 mt-sm-4 g-3">
+                <div class="col-12 col-md-6 col-lg-6">
+                  <div class="d-flex d-md-block gap-3 align-items-center">
+                    <img src="{% static '/img/about-icon11.webp'%}" class="img-box mb-4 img-fluid" alt="dental-technicians" style="padding:5px;border-radius:10px" width="50" height="50" />
+                    <div class="d-block d-md-block">
+                      <h3 class="fw-bold mb-2" style="color:#00478a;font-size:16px !important">
+                        Expert Dental Technicians
+                      </h3>
+                      <p class="hero-txt txt-spacing">
+                        Who leverage advanced digital technology to create precise, customized dental 
+                        restorations tailored to each patient’s needs.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                  <div class="d-flex d-md-block gap-3 align-items-center">
+                    <img src="{% static 'img/about-icon22.webp'%}" class="img-box mb-4" alt="about-icon2" style="padding:5px;border-radius:10px" width="45" height="45" />
+                    <div class="d-block d-md-block">
+                      <h3 class="fw-bold mb-2" style="color:#00818a;font-size:16px !important">
+                        Premium Quality Products
+                      </h3>
+                      <p class="hero-txt txt-spacing">
+                        Manufactured using state-of-the-art digital processes, ensuring durability, accuracy, and natural aesthetics.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 text-center text-md-start mt-3">
+                    <a href="/abput-us/">
+                        <button class="btn btn-primary mb-3 mb-sm-0 mt-sm-2 mt-md-2 mt-lg-0 mt-xl-5" style="background-color:#00478a;border:none">Discover Our Story</button>
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="feature-section space-section">
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+            <div class="col-11 col-xl-5 col-lg-5 order-1 order-lg-0">
+              <div class="text-left">
+                <h2 class="pt-4 pt-md-2 heading1">
+                  Committed to Excellence as a Fully
+                  <span class="highlight-text1">
+                    Digital Dental Lab
+                  </span>
+                  in USA
+                </h2>
+              </div>
+              <div class="feature-box-left text-left order-0 order-lg-1">
+                <p class="pt-2 txt-spacing">
+                  We are dedicated to delivering unparalleled precision and quality in every restoration. 
+                  Our commitment to excellence positions us as a trusted partner for dental professionals & 
+                  dentist labs across USA.
+                </p>
+                <p class="txt-spacing">
+                  Utilizing cutting-edge digital technologies, we ensure that each prosthetic is crafted to 
+                  meet the highest standards of fit and aesthetics.
+                </p>
+              </div>
+            </div>
+            <div class="col-11 col-xl-6 col-lg-6">
+                <img src="{% static '/img/section2.webp'%}" class="m-auto d-flex img-fluid" alt="digital-image" style="border-radius:10px" width="500"  height="200" />
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="pricing-plans space-section">
+        <div class="container text-center position-relative">
+          <h2 class="heading1 mb-4 text-center"> Our Most <span class="highlight-text1">Premium Product</span></h2>
+          <div class="row g-4 ">
+            <a href="/product/digital-workflow/" class="text-decoration-none mb-md-5 
+            col-12 col-lg-4 col-md-6">
+                <div class="product-row position-relative">
+                    <img src="{% static 'img/E-max-hm.webp'%}" alt="Example Image" class="img-fluid" width="306" height="190" />
+                    <span class="product-row-label">E-max CAD</span>
+                </div>
+            </a>
+            <a href="/product/crowns-bridges/" class="text-decoration-none mt-sm-3 position-relative col-12 col-lg-4 col-md-6">
+              <div class="img-middil product-row position-relative">
+                  <img src="{% static 'img/crown-hm.webp'%}" alt="Example Image" class="img-fluid" width="306" height="190" />
+                  <span class="product-row-label">Crown & Bridges</span>
+              </div>
+            </a>
+            <a href="/product/implants" class="text-decoration-none mt-sm-3 mt-md-5 col-12 col-lg-4 col-md-6">
+                <div class="product-row position-relative">
+                    <img src="{% static '/img/implant-hm1.webp' %}"  class="img-fluid" alt="Example Image" width="306" height="190" />
+                    <span class="product-row-label">Implant</span>
+                </div>
+            </a>
+          </div>
+          <img src="{% static 'img/dot.webp'%}" alt="dot-vector-img1" class="pvector1" width="300" height="450" />
+          <img src="{% static 'img/dot.webp'%}" alt="dot-vector-img2" class="pvector2" width="300" height="450" />
+        </div>
+    </section>
+    <section class="services-section space-section">
+        <div class="container d-flex">
+          <div class=" services_grid g-4 card-container row position-relative  mt-0 mb-0">
+            <h2 class="services-title home-title heading1 mb-2 mt-0">
+              Why USA Dentists Choose Our <span class="highlight-text1">Digital Dental Services?</span>
+            </h2>
+            <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+              <div class="intro__item">
+                <img src="{% static 'img/professional.png'%}" class="img-fluid" alt="ADDL at glance"  width="40" height="50"/>
+                <h3 class="intro__item-title my-2 my-sm-3">
+                  Certified Lab Standards
+                </h3>
+                <div class="line"></div>
+                <p class="intro__item-desc txt-spacing">
+                  Our laboratory maintains ISO and FDA certified, as well each product is CE-marked for 
+                  material excellence and is compliant with all applicable US quality regulations.
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="intro__item">
+                <img src="{% static 'img/time.png'%}" class="img-fluid" alt="time-icon-img"  width="40" height="50" />
+                <h3 class="intro__item-title my-2 my-sm-3">
+                  Fast Turnaround Time
+                </h3>
+                <div class="line"></div>
+                <p class="intro__item-desc txt-spacing">
+                  Thanks to our streamlined digital workflows, dental restorations are delivered quickly, 
+                  helping you reduce patient wait times and keep your schedule on track.
+                </p>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6">
+              <div class="intro__item">
+                <img src="{% static '/img/certificate.png' %}" class="img-fluid" alt="certificate-icon-img" width="40" height="50" />
+                <h3 class="intro__item-title my-2 my-sm-3">
+                  Professional Clinical Advice
+                </h3>
+                <div class="line"></div>
+                <p class="intro__item-desc txt-spacing">
+                  Our team of specialist dental technicians assists you in selecting optimal materials 
+                  and designs for even the most complex cases, ensuring superior clinical outcomes.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-12 col-lg-6">
+              <div class="intro__item">
+                <img src="{% static 'img/cost.png' %}" class="img-fluid" alt="cost-icon-img" width="40" height="50" />
+                <h3 class="intro__item-title my-2 my-sm-3">
+                  Cost-Effective Solutions
+                </h3>
+                <p class="line"></p>
+                <p class="intro__item-desc txt-spacing">
+                  By leveraging automated design and nesting, we minimize material waste and reduce labor costs, delivering premium restorations at highly competitive rates.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    {% include "home.html" %} 
+    <section class="support-section space-section">
+        <div class="container pt-2">
+          <div class="row  d-flex flex-row justify-content-center align-items-center">
+            <div class="col-12 col-lg-6 ss-header">
+              <div class="hero-subheading">Smile-Saving Support</div>
+              <h2 class="step_heading">
+                Our After-Sales Services for Your Dental Lab Needs
+              </h2>
+            </div>
+            <div class="col-12 col-lg-6 ss-header">
+              <p class="w-40 txt-spacing" >We’re committed to delivering exceptional post-delivery support to meet your clinical expectations. Our comprehensive service model includes five specialized touchpoints to ensure precision, timely communication, and complete satisfaction with every restoration we fabricate.</p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="process-section">
+        <div class="container">
+          <div class="row align-items-center justify-content-sm-between justify-content-lg-center justify-content-center">
+            <div class="col-10 order-1 order-sm-0 col-lg-3 col-sm-3">
+              <span class="process-img n1">01</span>
+            </div>
+            <div class="col-10 order-2 order-lg-0 col-sm-8 p-sm-0">
+              <h3 class="process-title ">Expert Consultation & Advisory</h3>
+              <p class="process-subtitle txt-spacing">
+                Our team of experienced professionals is dedicated to providing
+                expert guidance on our extensive range of materials, products,
+                and services. We offer personalized consultations to ensure you
+                receive the most suitable solutions for your specific cases,
+                helping you achieve optimal results with precision and
+                efficiency.
+              </p>
+            </div>
+            <div class="col-10 order-4 order-lg-0 col-sm-8 p-sm-0">
+              <h3 class="process-title text-sm-start text-lg-end">
+                Tailored Customization
+              </h3>
+              <p class="process-subtitle text-sm-start txt-spacing  text-lg-end">
+                We understand that every patient is unique, which is why we
+                offer fully customized dental solutions designed to meet the
+                precise needs of each case. Our commitment to precision and
+                personalization ensures optimal fit, function, and aesthetics
+                for superior patient outcomes.
+              </p>
+            </div>
+            <div class="col-10 order-3 order-lg-0 col-sm-3">
+              <span class="process-img text-sm-start text-lg-end n2">02</span>
+            </div>
+            <div class="col-10 col-sm-3 order-lg-0 order-5">
+              <span class="process-img n3">03</span>
+            </div>
+            <div class="col-10 col-sm-8 order-lg-0 order-6 p-sm-0">
+              <h3 class="process-title">Expert Clinical Guidance</h3>
+              <p class="process-subtitle">
+                Complex clinical cases require precision and expertise. Our team
+                of highly skilled clinical advisors, with extensive knowledge in
+                both clinical and technological aspects of dentistry, is here to
+                support you. We provide expert recommendations on treatment
+                planning, material selection, and procedural strategies,
+                ensuring the successful completion of even the most challenging
+                cases.
+              </p>
+            </div>
+            <div class="col-10 col-sm-8 order-lg-0 order-8 p-sm-0">
+              <h3 class="process-title text-sm-start text-lg-end">
+                Rapid Turnaround Times
+              </h3>
+              <p class="process-subtitle text-sm-start text-lg-end">
+                We recognize the importance of efficiency in patient care, which
+                is why we prioritize fast and reliable turnaround times for all
+                our products. Our streamlined processes and advanced technology
+                ensure timely delivery without compromising quality or
+                precision.
+              </p>
+            </div>
+            <div class="col-10 col-sm-3 order-lg-0 order-7">
+              <span class="process-img text-sm-start text-lg-end n4">04</span>
+            </div>
+            <div class="col-10 col-sm-3 order-lg-0 order-9">
+              <span class="process-img n5 ">05</span>
+            </div>
+            <div class="col-10 col-sm-8 order-lg-0 order-10 p-sm-0">
+              <h3 class="process-title">
+                Uncompromising Quality Assurance
+              </h3>
+              <p class="process-subtitle">
+                At ADDL, we are committed to the highest standards of
+                quality by utilizing cutting-edge technology and premium
+                materials to meet your exact specifications.
+              </p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <script>
+      function handleChangeImage(cardName){
+        let imageElement = document.getElementById("cardImage");
+        if(cardName === 'card1'){
+          imageElement.src = "{% static '/img/f1111.webp' %}"
+        } else if(cardName === "card2"){
+          imageElement.src = "/static/img/f2.webp"
+        } else if(cardName === "card3"){
+          imageElement.src = "/static/img/f4.webp"
+        } else if(cardName === "card4"){
+          imageElement.src = "/static/img/f5.webp"
+        }else{
+          imageElement.src = "/static/img/f3.webp"
+        }
+      }
+    </script>
 </div>
-{% endblock %}
+{% endblock %} 
 {% block js %}
 {% endblock %}

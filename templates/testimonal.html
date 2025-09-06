@@ -1,0 +1,80 @@
+{% load static %} {% block css %} {% endblock %} {% block body %}
+<section class="testmonial space-section">
+  <div class="container mt-4 mb-0 text-center">
+    <div class="hero-subheading">Testimoial</div>
+    <h2 class="heading1 mb-2 text-center">
+      Smiling Words from Satisfied Customers
+    </h2>
+    <div class="swiper reviewSwiper">
+      <div class="swiper-wrapper">
+        {% for ie in review %}
+        <div class="swiper-slide position-relative" >
+          <div
+            class="col-9 col-md-12 col-lg-12 testimonial_card"
+            style="marign-top: 0px; margin-bottom: 38px"
+          >
+            <img
+              src="{% static '/img/quotegrey.svg'%}"
+              class="custom_quote"
+              alt="Example Image"
+              width="70"
+              height="70"
+            />
+            <p class="testnomial_text">
+              “One of the best dental labs...!! The advanced lab provides
+              excellent aesthetic, well contoured, precise fitting for all work
+              whether its metal/pfm/all ceramic ya implant work!!“
+            </p>
+            <hr class="custom_hr" />
+            <p class="drname">Dr. Hardik Prajapati</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
+{% endblock %} {% block js %}
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".reviewSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 50,
+    centeredSlides: true,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 1,
+        spaceBetween: 60,
+      },
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+      },
+      991: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+      },
+      1080: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      },
+    },
+  });
+</script>
+{% endblock %}

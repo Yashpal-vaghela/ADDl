@@ -1,0 +1,275 @@
+{% load static %}
+{% block css %}
+{% endblock %}
+{% block body %}
+    <section class="why_ACE position-relative space-section">
+        <div class="container">
+          <h2 class="heading1 mt-1 mt-lg-0 text-center">
+            Need Assistance? Start Here
+          </h2>
+
+          <div class="row g-4">
+            <img src="{% static 'img/e.svg'%}" alt="earth-vec" class="earth-vec" width="100" height="100" />
+            <div class="col-12 col-lg-6 order-lg-1 order-2 p-4 py-sm-2">
+              <div class="card shadow-sm border-0" >
+                <div
+                  class="accordion user-select-none bg-transparent"
+                  id="faqAccordion"
+                >
+                  <div class="accordion text-left " id="faqAccordion">
+                    <div class="accordion-item border-0 ">
+                      <h3 class="accordion-header" id="headingOne">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseOne"
+                          aria-expanded="false"
+                          aria-controls="collapseOne"
+                          onClick="handleChangeImage('card1')"
+                        >
+                          What sets Ace as the best digital dental lab in the USA?
+                        </button>
+                      </h3>
+                      <div
+                        id="collapseOne"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingOne"
+                        data-bs-parent="#faqAccordion"
+                      >
+                        <div class="accordion-body txt-spacing">
+                          Ace combines an end-to-end digital workflow—powered by CAD/CAM milling and 3D 
+                          printing—with expert clinical advisors, ultra-fast turnaround, and cost-efficient 
+                          processes, all under a commitment to precision, innovation, and reliability.
+                        </div>
+                      </div>
+                    </div>
+
+                    <hr class="m-0 custom-hr" />
+
+                    <div class="accordion-item border-0">
+                      <h3 class="accordion-header" id="headingTwo">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseTwo"
+                          aria-expanded="false"
+                          aria-controls="collapseTwo"
+                          onclick="handleChangeImage('card2')"
+                        >
+                          What types of dental restorations does Ace Digital Dental Laboratory specialize in?
+                        </button>
+                      </h3>
+                      <div
+                        id="collapseTwo"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingTwo"
+                        data-bs-parent="#faqAccordion"
+                      >
+                        <div class="accordion-body txt-spacing">
+                          Ace focuses on CAD / CAM restorations, implant restorations and crowns & bridges, 
+                          offering full-service digital design and fabrication for fixed prosthetics.
+                        </div>
+                      </div>
+                    </div>
+
+                    <hr class="m-0 custom-hr" />
+
+                    <div class="accordion-item border-0">
+                      <h3 class="accordion-header" id="headingThree">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseThree"
+                          aria-expanded="false"
+                          aria-controls="collapseThree"
+                          onClick="handleChangeImage('card3')"
+                        >
+                          Which digital dental technologies does Ace use for dental restorations?
+                        </button>
+                      </h3>
+                      <div
+                        id="collapseThree"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingThree"
+                        data-bs-parent="#faqAccordion"
+                      >
+                        <div class="accordion-body txt-spacing">
+                          Ace leverages advanced CAD/CAM systems, 3D printing, and seamless digital 
+                          impression workflows to design and mill restorations with micron-level accuracy.
+                        </div>
+                      </div>
+                    </div>
+
+                    <hr class="m-0 custom-hr" />
+
+                    <div class="accordion-item border-0">
+                      <h3 class="accordion-header" id="headingFour">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseFour"
+                          aria-expanded="false"
+                          aria-controls="collapseFour"
+                          onclick="handleChangeImage('card4')"
+                        >
+                          What makes Ace a trusted partner for U.S. dentists?
+                        </button>
+                      </h3>
+                      <div
+                        id="collapseFour"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingFour"
+                        data-bs-parent="#faqAccordion"
+                      >
+                        <div class="accordion-body txt-spacing">
+                          With ISO/FDA-certified processes, dedicated clinical advisors, 
+                          a user-friendly online ordering portal, and consistently fast, reliable turnaround times, 
+                          Ace ensures predictable, high-quality results that dentists can depend on.
+                        </div>
+                      </div>
+                    </div>
+
+                    <hr class="m-0 custom-hr" />
+                    <div class="accordion-item border-0">
+                      <h3 class="accordion-header" id="headingFive">
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseFive"
+                          aria-expanded="false"
+                          aria-controls="collapseFive"
+                        >
+                          What certifications or standards does Ace comply with?
+                        </button>
+                      </h3>
+                      <div
+                        id="collapseFive"
+                        class="accordion-collapse collapse"
+                        aria-labelledby="headingFive"
+                        data-bs-parent="#faqAccordion"
+                      >
+                        <div class="accordion-body txt-spacing">
+                          All lab work is designed and finished in Europe according to ISO and FDA regulations, 
+                          and materials are CE-marked to guarantee top-tier safety and performance.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 order-lg-2 order-1">
+              <div class="card shadow-none m-auto border-0 d-flex justify-content-center align-items-center h-100 w-50 bg-transparent">
+                <img id="cardImage" src="{% static '/img/f1111.webp' %}" alt="Example Image" data-aos="fade-up" data-aos-delay="10" data-aos-duration="2000" class="aos-init aos-animate custom-acc-image timeline img-fluid" />
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="submitting_order space-section">
+        <img src="{% static 'img/linevec.svg'%}" alt="Example Image" class="img-fluid line-vec" width="300" height="200" />
+        <div class="container mt-lg-5 mt-md-2 text-center">
+          <div class="hero-subheading">Streamlined Digital Workflow</div>
+          <h2 class="heading1 mb-3 text-center">
+            <strong>Hassle-Free Order Submission with Ace Dental Lab</strong> <br />
+          </h2>
+          <p class="subHeading1 text-center">
+            Get started in seconds. Click the “Place Order” button to experience a seamless, professional, 
+            and fully digital workflow for your dental restoration needs.
+          </p>
+          <div class="row g-4">
+            <div class="col-12 col-lg-6 col-md-6 p-4 p-md-2 p-lg-3 pb-0 pb-sm-0 mt-0 text-start order-lg-1 order-2">
+              <ul class="timeline list-unstyled">
+                {% for ie in faqdata %}
+                  <li key={{ie.id}} class="d-flex align-items-start position-relative mb-4">
+                      <div class="timeline-icon d-flex align-items-center justify-content-center">
+                        <span>{{ie.id}}</span>
+                      </div>
+                      <div class="timeline-content ms-3">
+                        <h3 class="timeline-heading fw-bold">{{ie.title}}</h3>
+                        <p class="timeline-subheading txt-spacing">{{ie.description}}</p>
+                      </div>
+                      {% if forloop.counter0 != 3%}
+                        <hr class="timeline-line" />
+                      {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="col-12 col-lg-6 col-md-6 d-none d-sm-block mt-0 order-lg-2 order-1">
+              <div class="card shadow-none border-0 d-flex justify-content-center align-items-center h-100 bg-transparent">
+                <img src="{% static '/img/computer_mockup.webp' %}" alt="Example Image" class="custom-acc-image img-fluid timelineimg" width="400" height="550" /> 
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="lets-walk-togeather" style="margin:40px 0px 0px">
+      <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          class="h-full w-full background-video"
+          id="player"
+      >
+          <source src="https://d1ytpjko2pk6h2.cloudfront.net/new-masterpiece.webm" type="video/webm" />
+          <source src="https://d1ytpjko2pk6h2.cloudfront.netm/new-masterpiece.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+      </video>
+      <div class="video-overlay"></div>
+      <div class="container mt-sm-4 mt-5 px-sm-2 text-center">
+          <div class="gradientBG mb-2 mb-sm-4">Let's Work Together</div>
+          <h2 class="heading1 mb-2 mb-sm-1 text-center text-white">
+            <b>
+              Reach Out Us for Custom Dental Lab Solutions
+            </b>
+          </h2>
+          <h3 class="heading1 mb-2 mb-sm-3 text-center text-white">
+              <strong>For Exceptional Patient Care</strong>
+          </h3>
+          <p class="subHeading1 text-center mb-0 mb-sm-4 px-4  text-white">
+            Partner with us for precise, reliable dental lab solutions designed to meet your unique clinical needs and enhance patient outcomes.
+          </p>
+          <div class="simplebtn">
+            <a href="/contact-us/">Get In Touch</a>
+          </div>
+      </div>
+    </section>
+    <section class="ADDL-numbers space-section">
+        <div class="container text-center ">
+          <div class="addl_numbers space-section">
+            <h2 class="heading2 text-center  text-white">
+              Excellence in Dental Lab Metrics
+            </h2>
+            <div class="row innere_adl_numbers g-4 ">
+              <!-- counter common section -->
+              {% for ie in counters %}
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                  <div class="counter-card">
+                    <div class="Abovetext text-white" data-aos="fade-up" data-aos-duration="2000">
+                      {{ie.noteAbove}}
+                    </div>
+                    <div class="social-proof__value" data-aos="fade-up" data-aos-duration="2000">
+                      <div class="social-proof__count text-white" >
+                        {{ie.finalCount}}
+                      </div>
+                       <span class="suffixcounter text-white">{{ie.suffix}}</span>
+                    </div>
+                   
+                    <div class="belowtext">{{ie.noteBelow}}</div>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+    </section>
+{% endblock %}
+{% block js %}
+{% endblock %}

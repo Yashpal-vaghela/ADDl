@@ -9,5 +9,6 @@ urlpatterns = [
     path('contact-us',views.contact,name="contact"),
     path('support',views.support,name="support"),
     path('material',views.material,name="material"),
-    path('products',views.product,name="product")
+    path('products',views.product,name="product"),
+    path('product/<slug:slug>',views.singleproduct,name="singleproduct")
 ]

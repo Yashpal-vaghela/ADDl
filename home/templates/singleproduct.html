@@ -1,0 +1,392 @@
+{% extends "base.html" %} {% load static %} {% block css %} 
+<link rel="stylesheet" href="{% static 'css/product1.css' %}" />
+{% endblock %} {% block body %}
+<section class="bradcrumb-product" style="margin-top: 80px">
+  <div class="container h-100">
+    <div
+      class="d-flex justify-content-end align-items-start flex-column inner-bread"
+    >
+      <h1 class="breadcrumbTitle">Implants</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb text-sm breadcrumbNav">
+          <li class="breadcrumb-item active">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">Products</li>
+          <li class="breadcrumb-item">Implants</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</section>
+<section class="DW-home product-section1 Implant position-relative">
+  <img src={% static 'img/product-vector.webp' %} class="product-vector img-fluid" width="1920" height="568" alt="Product-vector" />
+  <div
+    class="container mt-4 mt-lg-5 mb-sm-4 mb-xl-5 mb-4 position-relative"
+    style="z-index: 1"
+  >
+    <img
+      src="{% static 'img/product-vector.webp' %}"
+      class="product-vector1 d-none img-fluid"
+      width="1920"
+      height="568"
+      alt="Product-vector"
+    />
+    <div class="row justify-content-between align-items-center">
+      <div
+        class="col-lg-6 col-md-6 p-md-0 col-xl-6 order-lg-1 order-md-1 order-2"
+      >
+        <h2 class="product-title mb-lg-3 mb-2 mb-sm-2 mb-xl-4">
+          <span>Ace Dental Implant For Teeth:</span> Precision, Speed, And
+          Stunning Esthetics Restorations
+        </h2>
+        <p class="product-sub-title mb-md-0">
+          Our implant for teeth restorations combines advanced digital design
+          with USA precision milling to deliver custom abutments and crowns that
+          fit perfectly and support ideal biomechanics, cutting chairside tweaks
+          and speeding turnaround. Crafted from FDA-approved materials, they
+          offer lasting strength and natural translucency to restore function
+          and confidence. Fully compatible with all major implant systems,
+          <b>Ace Dental Implants</b> make every case predictable and beautiful.
+        </p>
+      </div>
+      <div class="col-lg-6 col-md-6 p-md-0 order-lg-2 order-md-2 order-1">
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          id="player"
+          class="w-100 h-auto"
+          style="max-width: 100%; max-height: 400px; border-radius: 10px"
+        >
+          <source
+            src="https://d1ytpjko2pk6h2.cloudfront.net/Implant.mp4"
+            type="video/mp4"
+          />
+          <source src="https://d1ytpjko2pk6h2.cloudfront.net/Implant.webm" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="product-section2 why-implant-section pt-xl-4 mt-md-5">
+  <div class="container">
+    <h2 class="product-title mb-sm-2">
+      Why <span>Ace Implants</span> Are The Best Choice?
+    </h2>
+    <p class="product-sub-title">
+      When precision, predictability, and patient satisfaction are
+      non-negotiable, our dental implants deliver. We bring more than just
+      implant restorations, we bring peace of mind to every case. It’s the kind
+      of reliability that lets you focus on your patients, not follow-ups with
+      the lab.
+    </p>
+    <div
+      class="row justify-content-between align-items-center mt-4 mb-4 mb-sm-4 mb-md-4 mb-xl-5"
+    >
+      <div class="col-lg-6 col-md-12 mt-1 mt-sm-0 mt-md-0 mt-lg-0 mt-xl-0">
+        <img
+          src="{% static 'img/Implant-img.webp' %}"
+          class="Implant-img img-fluid"
+          alt="Implant-img"
+          width="651"
+          height="652"
+        />
+      </div>
+      <div class="col-lg-6 col-md-12 mt-4 mt-sm-3 mt-lg-0 mt-xl-0">
+        <ul class="product-section2-ul Implant-ul">
+          <li>
+            <h3>
+              Accurate Precision Every Time:&nbsp;
+              <span>
+                Digitally crafted for seamless integration and optimal
+                biomechanics. Using advanced CAD/CAM design and milling, we
+                achieve a level of fit and accuracy that minimizes adjustments
+                and remakes.
+              </span>
+            </h3>
+          </li>
+          <li>
+            <h3>
+              Exceptional Material Quality:&nbsp;
+              <span>
+                We use premium FDA-approved zirconia and titanium for implant
+                restoration, combining strength and esthetics to create durable,
+                natural-looking restorations built to last
+              </span>
+            </h3>
+          </li>
+          <li>
+            <h3>
+              Natural-Looking Implant Esthetics:&nbsp;
+              <span>
+                Stunning, lifelike implant restorations that look and feel
+                natural, with translucent zirconia and expert finishing for
+                beautiful implant crowns and bridges.
+              </span>
+            </h3>
+          </li>
+          <li>
+            <h3>
+              Fast & Reliable Turnaround:&nbsp;
+              <span>
+                Designed to keep your practice moving with fast, dependable
+                delivery and efficient workflows that get your implant cases
+                done quickly.
+              </span>
+            </h3>
+          </li>
+          <li>
+            <h3>
+              Dedicated Implant Expertise & Support:&nbsp;
+              <span>
+                Our specialized technicians provide personalized support &
+                thorough quality checks, ensuring your implant cases meet the
+                highest standards from start to finish.
+              </span>
+            </h3>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section
+  class="product-section4 product-quality-section"
+  id="product-quality-section"
+>
+  <img
+    src="{% static 'img/qty-sec-vector.webp'%}"
+    class="qty-sec-vector img-fluid"
+    width="1920"
+    height="568"
+    alt="Product-vector"
+  />
+  <div class="container pt-md-0 pt-lg-3 pt-xl-4 pb-xl-3">
+    <div class="text-section pt-md-5 pt-0 pb-md-4 pb-4 pb-sm-4" id="text1">
+      <h2 class="product-title quality-section-title">
+        Commitment to Perfection in <span>Implant Restorations</span>
+      </h2>
+      <p class="quality-section-description">
+        At Ace Digital Dental Laboratory, perfection isn’t just a goal, it’s our
+        standard. Every implant restoration we produce undergoes strict quality
+        checks and is crafted with precision technology and premium materials.
+      </p>
+    </div>
+    <div
+      class="row justify-content-md-between justify-content-center cards-container"
+    >
+      <div class="col-lg-4 col-md-6 col-sm-10 col-10 sticky-card" id="card1">
+        <div class="card">
+          <div class="card-header">
+            <img
+              src="{% static '/img/01.svg' %}"
+              class="img-fluid"
+              width="63"
+              height="30"
+              alt="number-01"
+            />
+          </div>
+          <div class="card-body">
+            At Ace, every implant case is carefully reviewed to ensure ideal
+            fit, long-term function, and seamless clinical integration.
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-10 col-10 sticky-card" id="card2">
+        <div class="card">
+          <div class="card-header">
+            <img
+              src="{% static '/img/02.svg' %}"
+              class="img-fluid"
+              width="63"
+              height="30"
+              alt="number-02"
+            />
+          </div>
+          <div class="card-body">
+            Our precision-driven CAD/CAM workflows deliver consistent,
+            custom-fit restorations with speed, accuracy, and digital
+            reliability.
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-10 col-10 sticky-card" id="card3">
+        <div class="card">
+          <div class="card-header">
+            <img
+              src="{% static '/img/03.svg' %}"
+              class="img-fluid"
+              width="63"
+              height="30"
+              alt="number-03"
+            />
+          </div>
+          <div class="card-body">
+            We use only FDA-approved, biocompatible materials—trusted for
+            safety, durability, and natural integration with oral tissues.
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-10 col-10 sticky-card" id="card4">
+        <div class="card">
+          <div class="card-header">
+            <img
+              src="{% static '/img/04.svg' %}"
+              class="img-fluid"
+              width="63"
+              height="30"
+              alt="number-04"
+            />
+          </div>
+          <div class="card-body">
+            Each implant restoration undergoes micron-level margin checks to
+            ensure flawless fit and eliminate chairside adjustments.
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-10 col-10 sticky-card" id="card5">
+        <div class="card">
+          <div class="card-header">
+            <img
+              src="{% static '/img/05.svg' %}"
+              class="img-fluid"
+              width="63"
+              height="30"
+              alt="number-05"
+            />
+          </div>
+          <div class="card-body">
+            Ace technicians personally inspect every case to guarantee
+            precision, function, and esthetics meet our perfection standards.
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-10 col-10 sticky-card" id="card6">
+        <div class="card">
+          <div class="card-header">
+            <img
+              src="{% static '/img/06.svg'%}"
+              class="img-fluid"
+              width="63"
+              height="30"
+              alt="number-06"
+            />
+          </div>
+          <div class="card-body">
+            All restorations are crafted under ISO-certified systems, reflecting
+            our commitment to global-quality benchmarks and clinical
+            reliability.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="product-section3 Implant-solution-section pt-lg-2 pt-xl-0 mt-4">
+  <div class="container pt-xl-3">
+    <h2 class="product-title mb-sm-1 mb-md-1">
+      Precision Smart Dental Implant Solutions By
+      <span> Ace Dental Lab</span>
+    </h2>
+    <p class="product-sub-title mb-lg-0 pb-xl-2">
+      At Ace Digital Dental Laboratory, our implant product line is built to
+      deliver consistency, precision, and clinical success across various cases.
+      We currently offer:
+    </p>
+    <div class="row justify-content-center gap-5 mt-4 mt-sm-3 mt-xl-4">
+      <div class="col-lg-5 col-md-10 p-sm-0">
+        <div class="product-card">
+          <img
+            src="{% static '/img/product-card-img.webp'%}"
+            alt="product-card-bg-img"
+            width="613"
+            height="765"
+            class="product-card-bg-img img-fluid"
+          />
+          <div class="product-card-header">
+            <h2 class="mb-0">Full-Arch Implant Solutions</h2>
+          </div>
+          <div class="product-card-img">
+            <img
+              src="{% static '/img/Implant-product-img1.webp'%}"
+              width="553"
+              height="325"
+              class="full-arch-img z-1 position-relative img-fluid"
+              alt="full-arch-img"
+            />
+          </div>
+          <div class="product-card-description position-relative mb-2">
+            <p class="text-center mb-0">
+              Designed for All-on-4 and All-on-6 implant cases, our full-arch
+              solutions feature milled titanium or zirconia frameworks for
+              long-term strength, accuracy, and patient satisfaction.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-md-10 p-sm-0">
+        <div class="product-card">
+          <img
+            src="{% static '/img/product-card-img.webp' %}"
+            alt="product-card-bg-img"
+            width="613"
+            height="765"
+            class="product-card-bg-img img-fluid"
+          />
+          <div class="product-card-header">
+            <h2 class="mb-0">Screw-Retained Crowns & Bridges</h2>
+          </div>
+          <div class="product-card-img">
+            <img
+              src="{% static '/img/Implant-product-img2.webp' %}"
+              width="553"
+              height="325"
+              class="zirconia-crown-img2 z-1 position-relative img-fluid"
+              alt="zirconia-crown-img2"
+            />
+          </div>
+          <div
+            class="product-card-description d-flex align-items-center m-auto position-relative mb-2"
+          >
+            <p class="text-center mb-0">
+              Precision-milled zirconia crowns and bridges with a screw-retained
+              implant design offer easy retrievability, exceptional marginal
+              accuracy, and lifelike esthetics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="product-contact my-5">
+  <video
+    autoplay
+    loop
+    muted
+    playsinline
+    id="player"
+    class="background-video product"
+  >
+    <source src="/videos/ADE12.mp4" type="video/mp4" />
+    <source src="/videos/ADE12.webm" type="video/webm" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="container">
+    <div class="product-contact-content">
+      <h2 class="product-title">
+        Let’s Make Your Next Implant Case Effortless
+      </h2>
+      <p>
+        Forget the remakes, delays, and guesswork. Ace teeth implants are
+        crafted for seamless fit, fast delivery, and flawless results. Choose
+        Ace Implants and experience the difference.
+      </p>
+      <button class="btn btn-contact">Talk to Our Team</button>
+    </div>
+  </div>
+</section>
+{% endblock %} {% block js %} {% endblock %}
