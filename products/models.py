@@ -80,6 +80,7 @@ class Advantage(models.Model):
 class CommitmentPoint(models.Model):
     product = models.ForeignKey(Product, related_name="commitment_points", on_delete=models.CASCADE)
     point = models.TextField(help_text="Add commiments")
+    point_image = models.ImageField(blank=True, null=True, upload_to="commitment")
 
     def __str__(self):
         return f"Commitment: {self.point[:50]}... ({self.product.category.name})"

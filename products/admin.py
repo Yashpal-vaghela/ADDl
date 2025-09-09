@@ -30,7 +30,7 @@ class AdvantageInline(admin.TabularInline):
 class CommitmentInline(admin.TabularInline):
     model = CommitmentPoint
     extra = 1
-    fields = ("point",)
+    fields = ("point","point_image")
 
 
 # -----------------------------
