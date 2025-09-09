@@ -1,0 +1,55 @@
+{% extends "base.html" %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/blog.css' %}" />
+{% endblock %} {% block body %}
+<section class="bradcrumb-product" style="margin-top: 80px">
+  <div class="container h-100">
+    <div class="d-flex justify-content-end align-items-start flex-column inner-bread">
+      <h1 class="breadcrumbTitle">Blogs</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb text-sm breadcrumbNav">
+          <li class="breadcrumb-item active">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item">Blogs</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</section>
+<section class="blog-section my-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-12">
+        <img
+          src="{% static '/img/blog-img1.png' %}"
+          class="img-fluid"
+          alt="blog-img"
+        />
+        <div class="blog-content-wrapper d-flex justify-content-between align-items-center my-3">
+          <p class="mb-0">Digital technology is at the heart of our manufacturing</p>
+          <a href="/blogs/emax-vs-zirconia-dental-crown/">
+            <button class="simplebtn btn mt-0">Read More</button>
+          </a>
+          {% comment %} <button class="btn simplebtn mt-0">Read More</button> {% endcomment %}
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-12">
+        <div class="blog-img-wrapper">
+            <img
+            src="{% static '/img/blog-img1.png' %}"
+            class="blog-img img-fluid"
+            alt="blog-img"
+            />
+        </div>
+        <div class="blog-content-wrapper d-flex justify-content-between align-items-center my-3">
+          <p class="mb-0">Digital technology is at the heart of our manufacturing</p>
+          <a href="/blog/Digital technology">
+            <button class="simplebtn btn mt-0">Read More</button>
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %} {% block js %} {% endblock %}

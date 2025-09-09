@@ -307,5 +307,8 @@
   }
 }
 
-
-
+/* --------------------------------crown and bridges single product page ------------------------------- */
+/* -------------------------------- product section 1 css ------------------------------- */
+.product-section1.crown-bridges .product-title{
+  width:100%;
+}

@@ -441,6 +441,7 @@ body:has(.offcanvas.show) {
     padding: 8px 12px;
     font-weight: bold;
     display: inline-block;
+    text-decoration: none;
 }
 .simplebtn:hover {
     cursor: pointer;

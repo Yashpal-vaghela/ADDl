@@ -47,7 +47,7 @@ class Product(models.Model):
 
     cta_heading = models.CharField(max_length=255, blank=True, null=True)
     cta_description = models.TextField(blank=True, null=True)
-    
+    cta_btn_name = models.CharField(max_length=180,blank=True,null=True)
     schema = models.TextField( blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

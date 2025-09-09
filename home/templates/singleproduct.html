@@ -1,28 +1,30 @@
 {% extends "base.html" %} {% load static %} {% block css %} 
 <link rel="stylesheet" href="{% static 'css/product1.css' %}" />
 {% endblock %} {% block body %}
+
+{% for item in product %}
 <section class="bradcrumb-product" style="margin-top: 80px">
   <div class="container h-100">
     <div
       class="d-flex justify-content-end align-items-start flex-column inner-bread"
     >
-      <h1 class="breadcrumbTitle">Implants</h1>
+      <h1 class="breadcrumbTitle">{{item.slug|capfirst}}</h1>
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb text-sm breadcrumbNav">
           <li class="breadcrumb-item active">
             <a href="/">Home</a>
           </li>
           <li class="breadcrumb-item active" aria-current="page">Products</li>
-          <li class="breadcrumb-item">Implants</li>
+          <li class="breadcrumb-item">{{item.slug|capfirst}}</li>
         </ol>
       </nav>
     </div>
   </div>
 </section>
-<section class="DW-home product-section1 Implant position-relative">
+<section class="DW-home product-section1 {% if item.slug == '/implants' %} Implant {% elif item.slug == "emax-veneers" %} emax {% elif item.slug == "crowns-bridges" %} crown-bridges {% endif %} position-relative">
   <img src={% static 'img/product-vector.webp' %} class="product-vector img-fluid" width="1920" height="568" alt="Product-vector" />
   <div
-    class="container mt-4 mt-lg-5 mb-sm-4 mb-xl-5 mb-4 position-relative"
+    class="container mt-4 mb-sm-4 mb-xl-5 mb-4 position-relative {% if item.slug == "/emax-veneers" or item.slug == "crowns-bridges" %} mt-lg-5 {% elif item.slug == "/implants" %} mt-lg-4 {% endif %}"
     style="z-index: 1"
   >
     <img
@@ -34,20 +36,13 @@
     />
     <div class="row justify-content-between align-items-center">
       <div
-        class="col-lg-6 col-md-6 p-md-0 col-xl-6 order-lg-1 order-md-1 order-2"
+        class="col-lg-6 col-md-6 p-md-0  col-xl-6 order-lg-1 order-md-1 order-2"
       >
         <h2 class="product-title mb-lg-3 mb-2 mb-sm-2 mb-xl-4">
-          <span>Ace Dental Implant For Teeth:</span> Precision, Speed, And
-          Stunning Esthetics Restorations
+          {{item.main_heading|safe}}
         </h2>
-        <p class="product-sub-title mb-md-0">
-          Our implant for teeth restorations combines advanced digital design
-          with USA precision milling to deliver custom abutments and crowns that
-          fit perfectly and support ideal biomechanics, cutting chairside tweaks
-          and speeding turnaround. Crafted from FDA-approved materials, they
-          offer lasting strength and natural translucency to restore function
-          and confidence. Fully compatible with all major implant systems,
-          <b>Ace Dental Implants</b> make every case predictable and beautiful.
+        <p class="product-sub-title {% if item.slug == "emax-veneers"%} mb-sm-2 mb-md-3 mb-lg-0 {% else %} mb-md-0 {% endif %}">
+          {{item.intro_descrption|safe}}
         </p>
       </div>
       <div class="col-lg-6 col-md-6 p-md-0 order-lg-2 order-md-2 order-1">
@@ -61,100 +56,54 @@
           style="max-width: 100%; max-height: 400px; border-radius: 10px"
         >
           <source
-            src="https://d1ytpjko2pk6h2.cloudfront.net/Implant.mp4"
+            src="{{item.product_video_link}}"
             type="video/mp4"
           />
-          <source src="https://d1ytpjko2pk6h2.cloudfront.net/Implant.webm" />
+          {% comment %} <source src="https://d1ytpjko2pk6h2.cloudfront.net/Implant.webm" /> {% endcomment %}
           Your browser does not support the video tag.
         </video>
       </div>
     </div>
   </div>
 </section>
-<section class="product-section2 why-implant-section pt-xl-4 mt-md-5">
+<section class="product-section2 {% if item.slug == "emax-veneers"%} why-emax-veneers-section pt-sm-3 mt-sm-4 mt-md-4 mt-lg-5 {% else %} pt-xl-4 mt-md-5 {% endif %} why-implant-section ">
   <div class="container">
-    <h2 class="product-title mb-sm-2">
-      Why <span>Ace Implants</span> Are The Best Choice?
+    <h2 class="product-title mb-sm-2 {% if item.slug == "emax-veneers"%} pe-0 pe-lg-0 w-100 {% endif %}">
+      {{item.why_heading|safe}}
     </h2>
     <p class="product-sub-title">
-      When precision, predictability, and patient satisfaction are
-      non-negotiable, our dental implants deliver. We bring more than just
-      implant restorations, we bring peace of mind to every case. It’s the kind
-      of reliability that lets you focus on your patients, not follow-ups with
-      the lab.
+      {{item.why_description|safe}}
     </p>
     <div
       class="row justify-content-between align-items-center mt-4 mb-4 mb-sm-4 mb-md-4 mb-xl-5"
     >
       <div class="col-lg-6 col-md-12 mt-1 mt-sm-0 mt-md-0 mt-lg-0 mt-xl-0">
         <img
-          src="{% static 'img/Implant-img.webp' %}"
-          class="Implant-img img-fluid"
+          src="{{item.product_image}}"
+          {% comment %} src="{% static 'img/Implant-img.webp' %}" {% endcomment %}
+          class="{% if item.slug == "/implants" %}Implant-img {% else %} emax-img{% endif %} img-fluid"
           alt="Implant-img"
           width="651"
           height="652"
         />
       </div>
       <div class="col-lg-6 col-md-12 mt-4 mt-sm-3 mt-lg-0 mt-xl-0">
-        <ul class="product-section2-ul Implant-ul">
-          <li>
-            <h3>
-              Accurate Precision Every Time:&nbsp;
-              <span>
-                Digitally crafted for seamless integration and optimal
-                biomechanics. Using advanced CAD/CAM design and milling, we
-                achieve a level of fit and accuracy that minimizes adjustments
-                and remakes.
-              </span>
-            </h3>
-          </li>
-          <li>
-            <h3>
-              Exceptional Material Quality:&nbsp;
-              <span>
-                We use premium FDA-approved zirconia and titanium for implant
-                restoration, combining strength and esthetics to create durable,
-                natural-looking restorations built to last
-              </span>
-            </h3>
-          </li>
-          <li>
-            <h3>
-              Natural-Looking Implant Esthetics:&nbsp;
-              <span>
-                Stunning, lifelike implant restorations that look and feel
-                natural, with translucent zirconia and expert finishing for
-                beautiful implant crowns and bridges.
-              </span>
-            </h3>
-          </li>
-          <li>
-            <h3>
-              Fast & Reliable Turnaround:&nbsp;
-              <span>
-                Designed to keep your practice moving with fast, dependable
-                delivery and efficient workflows that get your implant cases
-                done quickly.
-              </span>
-            </h3>
-          </li>
-          <li>
-            <h3>
-              Dedicated Implant Expertise & Support:&nbsp;
-              <span>
-                Our specialized technicians provide personalized support &
-                thorough quality checks, ensuring your implant cases meet the
-                highest standards from start to finish.
-              </span>
-            </h3>
-          </li>
+        <ul class="product-section2-ul">
+          {% for ie in advantages %}
+            <li>
+              <h3>
+                {{ie.title}}
+                <span>{{ie.point}}</span>
+              </h3>
+            </li>
+          {% endfor %}
         </ul>
       </div>
     </div>
   </div>
 </section>
 <section
-  class="product-section4 product-quality-section"
+  class="product-section4 product-quality-section {% if item.slug == "crowns-bridges" %}pt-2 pt-sm-0{% endif %}"
   id="product-quality-section"
 >
   <img
@@ -162,22 +111,22 @@
     class="qty-sec-vector img-fluid"
     width="1920"
     height="568"
-    alt="Product-vector"
+    alt="qty-sec-vector"
   />
-  <div class="container pt-md-0 pt-lg-3 pt-xl-4 pb-xl-3">
-    <div class="text-section pt-md-5 pt-0 pb-md-4 pb-4 pb-sm-4" id="text1">
+  <div class="container pt-md-0 {% if item.slug == "implants" %}pt-lg-3{% elif item.slug == "emax-veneers" %}pt-lg-5 {% elif item.slug == "crowns-bridges"%} pt-lg-1 {% endif %} pt-xl-4 pb-xl-3">
+    <div class="{% if item.slug == "implants" %} pt-0 {% endif %} text-section pt-md-5 pb-md-4 pb-4 pb-sm-4" id="text1">
       <h2 class="product-title quality-section-title">
-        Commitment to Perfection in <span>Implant Restorations</span>
+        {{item.commitment_heading|safe}}
+        {% comment %} Commitment to Perfection in <span>Implant Restorations</span> {% endcomment %}
       </h2>
       <p class="quality-section-description">
-        At Ace Digital Dental Laboratory, perfection isn’t just a goal, it’s our
-        standard. Every implant restoration we produce undergoes strict quality
-        checks and is crafted with precision technology and premium materials.
+        {{item.commitment_description}}
       </p>
     </div>
     <div
       class="row justify-content-md-between justify-content-center cards-container"
     >
+    {% for commit in commitmentpoint %}
       <div class="col-lg-4 col-md-6 col-sm-10 col-10 sticky-card" id="card1">
         <div class="card">
           <div class="card-header">
@@ -190,12 +139,14 @@
             />
           </div>
           <div class="card-body">
-            At Ace, every implant case is carefully reviewed to ensure ideal
-            fit, long-term function, and seamless clinical integration.
+            {{commit.point}}
+            {% comment %} At Ace, every implant case is carefully reviewed to ensure ideal
+            fit, long-term function, and seamless clinical integration. {% endcomment %}
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-10 col-10 sticky-card" id="card2">
+    {% endfor %}
+      {% comment %} <div class="col-lg-4 col-md-6 col-sm-10 col-10 sticky-card" id="card2">
         <div class="card">
           <div class="card-header">
             <img
@@ -281,23 +232,23 @@
             reliability.
           </div>
         </div>
-      </div>
+      </div> {% endcomment %}
     </div>
   </div>
 </section>
-<section class="product-section3 Implant-solution-section pt-lg-2 pt-xl-0 mt-4">
-  <div class="container pt-xl-3">
-    <h2 class="product-title mb-sm-1 mb-md-1">
-      Precision Smart Dental Implant Solutions By
-      <span> Ace Dental Lab</span>
+<section class="product-section3  {% if item.slug == "implants" %} Implant-solution-section pt-lg-2 pt-xl-0 mt-4 {% elif item.slug == "emax-veneers"%} emax-solution-section {% elif item.slug == "crowns-bridges" %} mt-4 pt-md-1 pt-xl-3 crown-bridge-premier{% endif %} ">
+  <div class="container {% if item.slug == "emax-veneers" %}pt-xl-3{% endif %}">
+    <h2 class="product-title mb-sm-1 mb-md-1 {% if item.slug == "emax-veneers" %} w-100 {% endif%}">
+      {{item.sub_product_title|safe}}
+      {% comment %} Precision Smart Dental Implant Solutions By
+      <span> Ace Dental Lab</span> {% endcomment %}
     </h2>
-    <p class="product-sub-title mb-lg-0 pb-xl-2">
-      At Ace Digital Dental Laboratory, our implant product line is built to
-      deliver consistency, precision, and clinical success across various cases.
-      We currently offer:
+    <p class="product-sub-title {% if item.slug == 'implants' %}mb-lg-0 pb-xl-2{% endif %}">
+      {{item.sub_product_description}}
     </p>
-    <div class="row justify-content-center gap-5 mt-4 mt-sm-3 mt-xl-4">
-      <div class="col-lg-5 col-md-10 p-sm-0">
+    <div class="row justify-content-center gap-5 mt-4 mt-sm-3 mt-xl-4{% if item.slug == "emax-veneers" %}mt-md-4{% elif item.slug == "crowns-bridges" %} mt-lg-4 mx-auto mb-5 pb-xl-3 mt-xl-4 {% endif%}">
+    {% for product in subproduct %}
+      <div class="col-lg-5 col-md-10 p-sm-0 {% if item.slug == "crowns-bridges" %}p-md-0{% endif %}" >
         <div class="product-card">
           <img
             src="{% static '/img/product-card-img.webp'%}"
@@ -307,27 +258,27 @@
             class="product-card-bg-img img-fluid"
           />
           <div class="product-card-header">
-            <h2 class="mb-0">Full-Arch Implant Solutions</h2>
+            <h2 class="mb-0">{{product.title}}</h2>
           </div>
           <div class="product-card-img">
             <img
-              src="{% static '/img/Implant-product-img1.webp'%}"
+              src="{{product.image}}"
+              {% comment %} src="{% static '/img/Implant-product-img1.webp'%}" {% endcomment %}
               width="553"
               height="325"
-              class="full-arch-img z-1 position-relative img-fluid"
-              alt="full-arch-img"
+              class="z-1 position-relative img-fluid {% if item.slug == "implants" %} full-arch-img {% elif item.slug == "emax-veneers" %} zirconia-crown-img2 {% elif item.slug == "crowns-bridges" %} zirconia-crown-img {% endif %}"
+              alt="{% if item.slug == "implants" %} full-arch-img {% elif item.slug == "emax-veneers" %}zirconia-crown-img2 {% elif item.slug == "crowns-bridges" %} zirconia-crown-img {% endif %}"
             />
           </div>
-          <div class="product-card-description position-relative mb-2">
+          <div class="product-card-description position-relative mb-2 {% if product.title != "Full-Arch Implant Solutions" or item.slug == "emax-veneers" %} d-flex align-items-center m-auto position-relative mb-2 {% endif %} ">
             <p class="text-center mb-0">
-              Designed for All-on-4 and All-on-6 implant cases, our full-arch
-              solutions feature milled titanium or zirconia frameworks for
-              long-term strength, accuracy, and patient satisfaction.
+              {{product.description}}
             </p>
           </div>
         </div>
       </div>
-      <div class="col-lg-5 col-md-10 p-sm-0">
+    {% endfor %}
+      {% comment %} <div class="col-lg-5 col-md-10 p-sm-0">
         <div class="product-card">
           <img
             src="{% static '/img/product-card-img.webp' %}"
@@ -358,11 +309,11 @@
             </p>
           </div>
         </div>
-      </div>
+      </div> {% endcomment %}
     </div>
   </div>
 </section>
-<section class="product-contact my-5">
+<section class="product-contact my-5 {% if item.slug == "crowns-bridges"%}crown-bridge-contact {% endif %}">
   <video
     autoplay
     loop
@@ -371,22 +322,22 @@
     id="player"
     class="background-video product"
   >
-    <source src="/videos/ADE12.mp4" type="video/mp4" />
+    <source src="{{item.cta_video}}" type="video/mp4" />
+    {% comment %} <source src="/videos/ADE12.mp4" type="video/mp4" /> {% endcomment %}
     <source src="/videos/ADE12.webm" type="video/webm" />
     Your browser does not support the video tag.
   </video>
   <div class="container">
-    <div class="product-contact-content">
-      <h2 class="product-title">
-        Let’s Make Your Next Implant Case Effortless
+    <div class="product-contact-content {% if item.slug == "crowns-bridges"%}  crown-bridge-contact-content {% endif %}">
+      <h2 class="product-title {% if item.slug == "emax-veneers" %} pe-0 w-100 {% endif %}">
+        {{item.cta_heading}}
       </h2>
       <p>
-        Forget the remakes, delays, and guesswork. Ace teeth implants are
-        crafted for seamless fit, fast delivery, and flawless results. Choose
-        Ace Implants and experience the difference.
+        {{item.cta_description}}
       </p>
-      <button class="btn btn-contact">Talk to Our Team</button>
+      <button class="btn btn-contact">{{item.cta_btn_name}}</button>
     </div>
   </div>
 </section>
+{% endfor %}
 {% endblock %} {% block js %} {% endblock %}

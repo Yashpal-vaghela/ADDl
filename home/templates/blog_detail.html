@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block css %}
+{% endblock %}
+{% block body %}
+<section class="bradcrumb-product" style="margin-top: 80px">
+  <div class="container h-100">
+    <div class="d-flex justify-content-end align-items-start flex-column inner-bread">
+      <h1 class="breadcrumbTitle">Blogs</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb text-sm breadcrumbNav">
+          <li class="breadcrumb-item active">
+            <a href="/">Home</a>
+          </li>
+          <li class="breadcrumb-item active">
+            <a href="/blogs">Blogs</a>
+          </li>
+          <li class="breadcrumb-item">blog detail title</li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+</section>
+<section class="blog-details-section">
+    <div class="container my-3">
+        <div class="blog-detail-img-wrapper d-flex mx-auto justify-content-center">
+            <img src="{% static 'img/blog-img1.png'%}" class="blog-img img-fluid" alt="blog-" />
+        </div>
+        <div class="blog-detail-content py-4">
+            <p class="mb-0">Blog detail description</p>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block js %}
+{% endblock %}

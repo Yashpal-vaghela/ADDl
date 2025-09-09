@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django.conf import settings
 import requests
 from products.models import *
@@ -43,6 +43,35 @@ def product(request):
     return render(request,'product.html')
 
 def singleproduct(request,slug):
-    # product = get_object_or_404(Product,slug=slug)
-    # print("product",product)
-    return render(request,'singleproduct.html')
+    # products =  Product.objects.filter(slug=slug)
+    # print("products-==================",products)
+    try:
+        products = Product.objects.filter(slug=slug)  # Raises DoesNotExist if not found
+        print("====products",products)
+        for product in products:
+            product_id = product.id
+
+        advantages = Advantage.objects.filter(product_id=product_id)
+        commitmentpoint = CommitmentPoint.objects.filter(product_id=product_id)
+        subproduct = SubProduct.objects.filter(product_id = product_id)
+        # product = get_object_or_404(Product,slug=slug)
+        # print("product",slug,products)
+        return render(request,'singleproduct.html',
+                  {'product':products,
+                   'advantages':advantages,
+                   'commitmentpoint':commitmentpoint,
+                   'subproduct':subproduct,
+                   }
+                )
+    except Product.DoesNotExist:
+        product = []  # Or handle it as you wish (return a message, redirect, etc.)
+        return render(request,'error.html')
+ 
+def blog(request):
+    return render(request,'blog.html')
+
+def blog_detail(request,slug):
+    blogs = Blogs.objects.filter(slug=slug)
+    # blog = get_object_or_404(Blogs,slug=slug)
+    print("blogs",blogs)
+    return render(request,'blog_detail.html')

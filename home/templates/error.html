@@ -1,0 +1,31 @@
+{% extends "base.html" %}{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/common.css' %}" />
+{% endblock %}
+{% block body %}
+<div id="notfound">
+    <div class="notfound" style="padding-top:80px" >
+        <div class="container text-center" style="padding-top:2rem;padding-bottom:2rem">
+          <div class="fzf-block">
+            <p class="numberfour left">4</p>
+                <img
+                    src="{% static '/img/teeth.webp' %}"
+                    alt="teeth"
+                    width="270"
+                    height="270"
+                    class="img-fluid teethimage"
+                /> 
+            <p class="numberfour right">4</p>
+          </div>
+
+          <p class="oops">OOPS!!</p>
+
+          <p class="texts">Nothing found here, but no worries, <br /> We can fix it!</p>
+          <a href="/" class="simplebtn errorbtn">Back to Home</a>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
+{% block js %}
+{% endblock %}
