@@ -22,7 +22,7 @@
           rel="stylesheet"
         ></link>
         <link rel="stylesheet" href="{% static 'css/header.css'%}" />
-        <link rel="stylesheet" href="{% static 'css/about.css' %}" />
+        {% comment %} <link rel="stylesheet" href="{% static 'css/about.css' %}" /> {% endcomment %}
         <link rel="stylesheet" href="{% static 'css/product.css' %}" /> 
         <link rel="stylesheet" href="{% static 'css/common.css' %}" /> 
         {% block css %} {% endblock %}
@@ -126,7 +126,7 @@
                                 <a  class="nav-link mx-lg-2 dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown" id="navbarDropDown" aria-current="page" >Products</a>
                                 <ul class="dropdown-menu">
                                     <li><a href="/product/implants" class="dropdown-item {% if request.path == "/product/implants" %}active{% endif %}">Implants</a></li>
-                                    <li><a href="/product/emax-veneers" class="dropdown-item {% if request.path == "/product/emax" %}active{% endif %}">Emax</a></li>
+                                    <li><a href="/product/emax-veneers" class="dropdown-item {% if request.path == "/product/emax-veneers" %}active{% endif %}">Emax</a></li>
                                     <li><a href="/product/crowns-bridges" class="dropdown-item {% if request.path == "/product/crowns-bridges" %}active{% endif %}">Crowns & Bridges</a></li>
                                 </ul>
                             </li>
@@ -268,5 +268,6 @@
         {% endfor %}
       {% endif %}
     </script>
+    {% block js%}{% endblock %}
     </body>
 </html>

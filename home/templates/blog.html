@@ -20,36 +20,77 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-md-6 col-12">
-        <img
-          src="{% static '/img/blog-img1.png' %}"
-          class="img-fluid"
-          alt="blog-img"
-        />
-        <div class="blog-content-wrapper d-flex justify-content-between align-items-center my-3">
-          <p class="mb-0">Digital technology is at the heart of our manufacturing</p>
-          <a href="/blogs/emax-vs-zirconia-dental-crown/">
-            <button class="simplebtn btn mt-0">Read More</button>
-          </a>
-          {% comment %} <button class="btn simplebtn mt-0">Read More</button> {% endcomment %}
-        </div>
+        <a href="/blogs/emax-vs-zirconia-dental-crown/" class="blog-main-content">
+            <i class="fa-solid fa-arrow-right custom-cursor"></i>
+            <div class="blog-image-wrapper">
+              <img
+                src="{% static '/img/blog-img1.png' %}"
+                class="img-fluid"
+                alt="blog-img"
+              />
+            </div>
+            <div class="blog-content-wrapper d-flex justify-content-between align-items-center pt-3">
+              <p class="mb-0">Digital technology is at the heart of our manufacturing</p>
+              <button class="simplebtn btn mt-0">Read More</button>
+              {% comment %} <button class="btn simplebtn mt-0">Read More</button> {% endcomment %}
+            </div>
+        </a>
       </div>
       <div class="col-lg-6 col-md-6 col-12">
-        <div class="blog-img-wrapper">
+        <a href="/blog/Digital-technology" class="blog-main-content">
+          <div class="blog-img-wrapper">
             <img
-            src="{% static '/img/blog-img1.png' %}"
-            class="blog-img img-fluid"
-            alt="blog-img"
+              src="{% static '/img/blog-img1.png' %}"
+              class="blog-img img-fluid"
+              alt="blog-img"
             />
-        </div>
-        <div class="blog-content-wrapper d-flex justify-content-between align-items-center my-3">
-          <p class="mb-0">Digital technology is at the heart of our manufacturing</p>
-          <a href="/blog/Digital technology">
+          </div>    
+          <div class="blog-content-wrapper d-flex justify-content-between align-items-center pt-3">
+            <p class="mb-0">Digital technology is at the heart of our manufacturing</p>
             <button class="simplebtn btn mt-0">Read More</button>
-          </a>
-          
-        </div>
+          </div>  
+        </a>
       </div>
     </div>
   </div>
 </section>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const customCursor = document.querySelector(".custom-cursor");
+    const imageWrappers = document.querySelectorAll(".blog-main-content");
+
+    // Track mouse movement only inside image area
+    imageWrappers.forEach((wrapper) => {
+      wrapper.addEventListener("mousemove", function (e) {
+        customCursor.style.left = e.clientX + "px";
+        customCursor.style.top = e.clientY + "px";
+      });
+
+      wrapper.addEventListener("mouseenter", function () {
+        customCursor.style.opacity = "1"; // Show custom cursor
+        customCursor.style.transform = "scale(1.5) rotate(-45deg)";
+      });
+
+      wrapper.addEventListener("mouseleave", function () {
+        customCursor.style.opacity = "0"; // Hide custom cursor
+        customCursor.style.transform = "scale(1) rotate(-45deg)";
+      });
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const wrappers = document.querySelectorAll(".blog-image-wrapper");
+
+    wrappers.forEach((wrapper) => {
+      wrapper.addEventListener("mouseenter", () => {
+        wrapper.classList.add("hover-effect");
+      });
+
+      wrapper.addEventListener("mouseleave", () => {
+        wrapper.classList.remove("hover-effect");
+      });
+    });
+  });
+</script>
 {% endblock %} {% block js %} {% endblock %}

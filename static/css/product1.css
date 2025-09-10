@@ -252,22 +252,22 @@
 
 /* --------------------------------Implant single product page ------------------------------- */
 /* -------------------------------- product  section 1 css ------------------------------- */
-.product-section1.Implant .product-vector {
+/* .product-section1.Implant .product-vector {
     top: 15%;
-}
-.product-section1.Implant .product-text {
+} */
+/* .product-section1.Implant .product-text {
   line-height: 1.7;
   font-weight: 500;
   width: 100%;
-}
-.product-section1.Implant p{
+} */
+/* .product-section1.Implant p{
     letter-spacing: .2px;
     padding-right: 50px;
-}
-.product-section1.Implant p b {
+} */
+/* .product-section1.Implant p b {
     color: rgba(0, 102, 153, 1);
     font-weight: 700;
-}
+} */
 /* product section 2 */
 .product-section2 .Implant-img {
     width: 90%;
@@ -280,9 +280,9 @@
   }
 }
 @media(max-width:991px){
-  .product-section1.Implant .product-vector{
+  /* .product-section1.Implant .product-vector{
     top:10%;
-  }
+  } */
   .product-section1.Implant p {
     padding-right: 20px;
     font-size: 14px;

@@ -4,6 +4,11 @@
     border-radius: 15px;
     color:transparent
 }
+.img-box {
+    background-color: rgba(1, 94, 138, 0.1);
+    padding: 8px;
+    border-radius: 6px;
+}
 /* .About-section .col-xl-5{
     justify-content: left !important;
     padding-left: 12px;
@@ -85,7 +90,7 @@
     flex-direction: column;
 }
 .product-row-label {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 1.35rem;
     text-align: center;
     white-space: normal;
@@ -144,7 +149,7 @@
 .services-section .services-title{
     text-align: center;
     color:#000;
-    font-weight: 600;
+    /* font-weight: 600; */
 }
 .intro__item {
     color: #fff;
@@ -378,7 +383,7 @@
     color: #545350;
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.5;
+    /* line-height: 1.5; */
 }
 .timeline-line {
     background: #ccc;
@@ -437,7 +442,8 @@
         font-size: 15px;
     }
     .timeline-subheading {
-        font-size: 13px;
+        /* font-size: 13px; */
+        line-height: 1.7;
     }
     .line-vec {
         width: 100% !important;
@@ -527,6 +533,7 @@
         font-size: 0.9rem;
         margin-top: 5px;
         margin-bottom: 5px !important;
+        letter-spacing: 0.4px;
     }
     .lets-walk-togeather .subHeading1{
         font-size: 0.75rem;
@@ -716,7 +723,7 @@
 }
 @media(max-width:576px){
     .addl_numbers{
-        padding: 3rem 0 3.6rem;
+        padding: 2.5rem 0 3rem;
     }
     .innere_adl_numbers {
       max-width: 300px;
@@ -801,7 +808,10 @@
     }
     .step_heading {
         width: 100%;
-        font-size: 25px;
+        font-size: 1.3rem;
+    }
+    .process-title{
+        font-size: 16px;
     }
 }
 @media(max-width:576px){

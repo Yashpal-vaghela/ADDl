@@ -277,13 +277,16 @@
 .heading1 {
   margin-bottom: 2rem;
   font-size: 2.4rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.55;
 }
+/* .heading1 strong,.heading1 b{
+  font-weight: 500;
+} */
 .heading2 {
   margin-bottom: 1rem;
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 .hero-subheading {
   font-size: 16px;
@@ -301,8 +304,14 @@
 .space-section {
   padding: 50px 0px 25px;
 }
+.highlight {
+  color: #4a9da0;
+}
 .highlight-text1 {
   color: #00478a;
+}
+.highlight-text2 {
+    color: #00818a;
 }
 .txt-spacing {
   letter-spacing: 0.5px;
@@ -377,13 +386,13 @@
     padding-right: 40px;
 }
 .product-sub-title b{
-      color: rgba(0, 102, 153, 1);
+    color: rgba(0, 102, 153, 1);
     font-weight: 700;
 }
 .product-section1 .product-vector {
     z-index: 1;
     position: absolute;
-    top:15%
+    top:12%;
 }
 .product-section1 .product-title {
     width: 84%;
@@ -391,12 +400,7 @@
     line-height: 1.7;
 }
 .product-section1 .product-title span {
-  background: linear-gradient(
-    264.54deg,
-    #68aba1 14.29%,
-    #069 50.25%,
-    #68aba1 121.29%
-  );
+  background: linear-gradient( 264.54deg,#68aba1 14.29%,#069 50.25%,#68aba1 121.29%);
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
   color: transparent !important;
@@ -497,7 +501,7 @@
 .product-section2-ul li h3 span {
   font-size: 14px;
   font-weight: 550;
-  letter-spacing: 0.2;
+  letter-spacing: 0.2px;
 }
 @media(max-width:991px){
   .product-section2-ul {
@@ -560,7 +564,12 @@
   letter-spacing: 0.3px;
   line-height: 1.7;
 }
-@media(min-width:1440px) and (max-width:1649px){
+@media(min-width:1650px){
+  .product-card-description {
+    height: 24%;
+  } 
+}
+@media screen and (min-width:1400px) and (max-width:1649px){
   .product-card-description {
     height: 23.5%;
   } 
@@ -756,7 +765,7 @@
 }
 .product-contact-content h2 {
   line-height: 1.6;
-  letter-spacing: 0.3;
+  letter-spacing: 0.3px;
   margin-bottom: 20px;
   font-weight: 700;
 }

@@ -1,9 +1,77 @@
 /* .blog-img:hover{
 
 } */
- .blog-content-wrapper a{
+ .blog-image-wrapper {
+    overflow: hidden;
+    display: inline-block;
+}
+.blog-image-wrapper img {
+    transition: transform 0.6s ease, filter 0.3s ease;
+    transform: scale(1);
+    filter: blur(0);
+}
+.blog-image-wrapper.hover-effect img {
+    transform: scale(1.1);  /* Slight zoom-out */
+    filter: blur(3px);       /* Apply blur effect */
+}
+.custom-cursor {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    /* background-image: url("{% static 'images/custom-cursor.png' %}"); */
+    /* background: linear-gradient(264.54deg, #68aba1 14.29%, #069 50.25%, #68aba1 121.29%); */
+    background: linear-gradient(135deg, #00478a, #00818a);
+    color:#fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 9999;
+    border-radius: 50%;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+    padding: 13px;
+    opacity: 0;
+}
+.blog-main-content {
+    color: #000;
+    text-decoration: none;
+    cursor: none;
+}
+.blog-main-content:hover{
+    color:#000
+}
+.simplebtn{
+    cursor:none !important;
+}
+.simplebtn:hover{
+    color:#fff !important;
+}
+.blog-content-wrapper a{
     color: #fff;
- }
+}
+/* 
+.blog-image-wrapper{
+    overflow: hidden;
+}
+.blog-image-wrapper:hover{
+    animation: imgZoomout 2s ease-in-out;
+}
+@keyframes imgZoomout{
+    0%{
+        filter: blur(0px);
+        transform: none;
+        opacity: 1;
+        will-change: transform;
+    }
+    100%{
+        filter: blur(3px);
+        transform: scale(1.1);
+        opacity: 1;
+        will-change: transform;
+    }
+}
+
 .blog-content-wrapper .btn{
     padding: 6px 16px;
     font-size: 15px;
@@ -23,4 +91,4 @@
     .blog-content-wrapper p{
         width:70%;
     }
-}
+} */
