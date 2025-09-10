@@ -1,10 +1,29 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
+{% block header %} 
+{% endblock header %}  
 {% load static %} 
+{% block seo%}
+<title>Ace Digital Dental Lab | Best Dental Lab Services in USA</title>
+<meta name="description" content="Ace Digital Dental Lab is one of the best dental lab in USA, For designing high quality dental prosthesis using digital technologies with advanced precision." />
+<link rel="canonical" href="https://acedigitaldentallaboratory.com/"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Ace Digital Dental Lab | Best Dental Lab Services in USA" />
+<meta property="og:description" content="Ace Digital Dental Lab is one of the best dental lab in USA, For designing high quality dental prosthesis using digital technologies with advanced precision."/>
+<meta property="og:url" content="https://acedigitaldentallaboratory.com/"/>
+<meta property="og:site_name" content="Ace Digital Dentla lab" />
+<meta property="og:image" content= {% static '/img/feature-ADDL.webp'%} />
+<meta property= "og:image:type" conten="image/webp" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="viewport" content="width=device-width, initial-scale=1" />
+<meta property="robots" content="index, follow" />
+{% endblock seo %}
 {% block css %} 
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" as="style">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="{% static 'css/home.css'%}"/>
-{% endblock %} 
+{% endblock css %} 
 {% block body %}
 <div class="main-container overflow-hidden">
     <section class="p-0 parallax overlap-height">

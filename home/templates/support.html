@@ -1,4 +1,21 @@
 {% extends 'base.html' %} {% load static %}
+{% block seo%}
+<title>Support & Assistance | Ace Digital Dental Laboratory</title>
+<meta name="description" content="Need help with your dental lab cases or services? ADDL's support team is here to assist you with case tracking, submissions, and technical questions. Contact us today!"/>
+<link rel="canonical" href="https://acedigitaldentallaboratory.com/support/" />
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Support & Assistance | Ace Digital Dental Laboratory" />
+<meta property="og:description" content="Need help with your dental lab cases or services? ADDL's support team is here to assist you with case tracking, submissions, and technical questions. Contact us today!" />
+<meta property="og:url" content="https://acedigitaldentallaboratory.com/support/" />
+<meta property="og:site_name" content="Ace Digital Dental Lab" />
+<meta properyt="og:image" content="{% static '/img/feature-ADDL.webp'%}" />
+<meta property="og:image:type" content="image/webp" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="viewport" content="width=device-width, initial-scale=1"/>
+<meta property="robots" content="index, follow" />                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+{% endblock seo%}
 {% block css %} 
 <link rel="stylesheet" href="{% static 'css/support.css' %}" />
 {% endblock %} {% block body %}
@@ -283,4 +300,34 @@
     </div>
   </div>
 </section>
-{% endblock %} {% block js %} {% endblock %}
+{% endblock %} 
+{% block js %} 
+<script type="application/ld+json">
+   const webPageSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Support & Assistance | Ace Digital Dental Laboratory",
+        "url": "https://acedigitaldentallaboratory.com/support/",
+        "description": "Need help with your dental lab cases or services? ADDL's support team is here to assist you with case tracking, submissions, and technical questions. Contact us today!",
+        "inLanguage": "en"
+    }
+      const breadcrumsSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://acedigitaldentallaboratory.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": "https://acedigitaldentallaboratory.com/support/"
+        }
+      ]
+  }
+</script>
+{% endblock %}

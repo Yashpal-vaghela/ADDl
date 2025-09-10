@@ -1,4 +1,22 @@
-{% extends "base.html" %} {% load static%} {% block css %} 
+{% extends "base.html" %} {% load static%} 
+{% block seo %}
+<title>Contact Us | Ace Digital Dental Laboratory</title>
+<meta name="description" content="Discover the story behind ADDL. With a commitment to innovation, precision, and quality, we partner with dental professionals to deliver exceptional digital dental restorations."/>
+<link rel="canonical" href="https://acedigitaldentallaboratory.com/contact-us/"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Contact Us | Ace Digital Dental Laboratory"/>
+<meta property="og:description" content="Discover the story behind ADDL. With a commitment to innovation, precision, and quality, we partner with dental professionals to deliver exceptional digital dental restorations."/>
+<meta property="og:url" content="https://acedigitaldentallaboratory.com/contact-us/" />
+<meta property="og:site_name" content="Ace Digital Dental Lab"/>
+<meta property="og:image" content="{% static '/img/feature-ADDL.webp'%}" />
+<meta property="og:image:type" content="image/webp" />
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" centent="630"/>
+<meta property="viewport" content="width=device-width, initial-scale=1" />
+<meta property="robots" content="index, follow" />
+{% endblock seo%}
+{% block css %} 
 <link rel="stylesheet" href="{% static 'css/contact.css' %}" />
 {% endblock %} {% block body %}
 <section class="p-0 parallax overlap-height">
@@ -217,4 +235,32 @@
       {% endfor %}
     {% endif %}
   </script>
+  <script type="application/ld+json">
+    const webPageSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Contact Us | Ace Digital Dental Laboratory",
+        "url": "https://acedigitaldentallaboratory.com/contact-us/",
+        "description": "Discover the story behind ADDL. With a commitment to innovation, precision, and quality, we partner with dental professionals to deliver exceptional digital dental restorations.",
+        "inLanguage": "en"
+    }
+      const breadcrumsSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://acedigitaldentallaboratory.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact US",
+          "item": "https://acedigitaldentallaboratory.com/contact-us/"
+        }
+      ]
+  }
+  </script>  
 {% endblock %}

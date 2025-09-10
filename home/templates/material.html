@@ -1,5 +1,21 @@
 {% extends "base.html" %}
 {% load static %}
+{% block seo%}
+<title>High-Quality Dental Materials | Ace Digital Dental Laboratory</title>
+<meta name="description" content="Discover premium dental materials for crowns, bridges, implants, and restorations. Ace Digital Dental Lab ensures strength, aesthetics, and precision in every product."/>
+<link rel="canonical" content="https://acedigitaldentallaboratory.com/materials/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="High-Quality Dental Materials | Ace Digital Dental Laboratory" />
+<meta property="og:description" content="Discover premium dental materials for crowns, bridges, implants, and restorations. Ace Digital Dental Lab ensures strength, aesthetics, and precision in every product." />
+<meta property="og:url" content="https://acedigitaldentallaboratory.com/materials/" />
+<meta property="og:image" content="/images/feature-ADDL.webp" />
+<meta property="og:image:type" content="/image/webp" />
+<meta property="og:width" content="1200" />
+<meta property="og:height" content="630" />
+<meta property="viewport" content="width=device-width, initial-scale=1" />
+<meta property="robots" content="index, follow" />
+{% endblock seo%}
 {% block css %}
 <link rel="stylesheet" href="{% static 'css/material.css' %}" />
 {% endblock %}
@@ -309,4 +325,32 @@
 </div>
 {% endblock %}
 {% block js %}
+<script type="application/ld+json">
+    const webPageSchema = {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "High-Quality Dental Materials | Ace Digital Dental Laboratory",
+        "url": "https://acedigitaldentallaboratory.com/materials/",
+        "description": "Discover premium dental materials for crowns, bridges, implants, and restorations. Ace Digital Dental Lab ensures strength, aesthetics, and precision in every product.",
+        "inLanguage": "en"
+    }
+      const breadcrumsSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://acedigitaldentallaboratory.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Materials",
+          "item": "https://acedigitaldentallaboratory.com/materials/"
+        }
+      ]
+    }
+</script>
 {% endblock %}

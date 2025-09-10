@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en_IN">
+<html lang="en_US">
     <head>
     {% load static %}
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+     {% block seo %}{% endblock seo %}
         {% comment %} <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -33,6 +33,46 @@
         ></script>  {% endcomment %}
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+        <!--Google Tag Manager code-->
+        <script type="text/javascript">
+            (function(c,l,a,r,i,t,y){
+                c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "siomz3sq4l");
+        </script>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-K25KWE37YK"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-K25KWE37YK');
+        </script>
+        <!--Schema-->
+        <script type="application/ld+json">
+            "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Ace Digital Dental Lab",
+              "alternateName": "Ace Digital Dental Lab | Best Dental Lab In USA",
+              "url": "https://acedigitaldentallaboratory.com/",
+              "logo": "https://acedigitaldentallaboratory.com/images/ACE-logo.webp",
+              "description": "Ace Digital Dental Lab delivers high-quality dental prosthetics and custom digital solutions, trusted by dental professionals worldwide.",
+              "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "1 Auer Court, 2nd Floor East Brunswick, New Jersey 08816",
+              "addressLocality": "New Jersey",
+              "postalCode": "08816",
+              "addressCountry": "US"
+              },
+              "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1 551-380-0385",
+              "contactType": "customer service",
+              "areaServed": ["US"],
+              "availableLanguage": ["English"]
+              }
+        </script>
     </head>
     <body>
     {% load static %}
@@ -85,10 +125,8 @@
                             <li class="nav-item dropdown">
                                 <a  class="nav-link mx-lg-2 dropdown-toggle d-flex align-items-center" data-bs-toggle="dropdown" id="navbarDropDown" aria-current="page" >Products</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href='/product/digital-workflow' class="dropdown-item {% if request.path == "/product/digital-workflow "%}active{% endif %}">Digital Workflow</a></li>
-                                    <li><a href="/product/cad-cam" class="dropdown-item {% if request.path == "/product/cad-cam" %}active{% endif %}">CAD / CAM Restoration</a></li>
                                     <li><a href="/product/implants" class="dropdown-item {% if request.path == "/product/implants" %}active{% endif %}">Implants</a></li>
-                                    <li><a href="/product/emax" class="dropdown-item {% if request.path == "/product/emax" %}active{% endif %}">Emax</a></li>
+                                    <li><a href="/product/emax-veneers" class="dropdown-item {% if request.path == "/product/emax" %}active{% endif %}">Emax</a></li>
                                     <li><a href="/product/crowns-bridges" class="dropdown-item {% if request.path == "/product/crowns-bridges" %}active{% endif %}">Crowns & Bridges</a></li>
                                 </ul>
                             </li>
