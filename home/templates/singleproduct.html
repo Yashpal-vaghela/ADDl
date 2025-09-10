@@ -21,10 +21,10 @@
     </div>
   </div>
 </section>
-<section class="DW-home product-section1 {% if item.slug == '/implants' %} Implant {% elif item.slug == "emax-veneers" %} emax {% elif item.slug == "crowns-bridges" %} crown-bridges {% endif %} position-relative">
+<section class="DW-home product-section1 position-relative">
   <img src={% static 'img/product-vector.webp' %} class="product-vector img-fluid" width="1920" height="568" alt="Product-vector" />
   <div
-    class="container mt-4 mb-sm-4 mb-xl-5 mb-4 position-relative {% if item.slug == "/emax-veneers" or item.slug == "crowns-bridges" %} mt-lg-5 {% elif item.slug == "/implants" %} mt-lg-4 {% endif %}"
+    class="container mt-4 mt-lg-4 mb-sm-4 mb-xl-5 mb-4 position-relative "
     style="z-index: 1"
   >
     <img
@@ -36,12 +36,12 @@
     />
     <div class="row justify-content-between align-items-center">
       <div
-        class="col-lg-6 col-md-6 p-md-0  col-xl-6 order-lg-1 order-md-1 order-2"
+        class="col-lg-6 col-md-6 p-md-0 col-xl-6 order-lg-1 order-md-1 order-2"
       >
         <h2 class="product-title mb-lg-3 mb-2 mb-sm-2 mb-xl-4">
           {{item.main_heading|safe}}
         </h2>
-        <p class="product-sub-title {% if item.slug == "emax-veneers"%} mb-sm-2 mb-md-3 mb-lg-0 {% else %} mb-md-0 {% endif %}">
+        <p class="product-sub-title mb-md-0">
           {{item.intro_descrption|safe}}
         </p>
       </div>
@@ -55,18 +55,14 @@
           class="w-100 h-auto"
           style="max-width: 100%; max-height: 400px; border-radius: 10px"
         >
-          <source
-            src="{{item.product_video_link}}"
-            type="video/mp4"
-          />
-          {% comment %} <source src="https://d1ytpjko2pk6h2.cloudfront.net/Implant.webm" /> {% endcomment %}
+          <source src="{% static 'ADDL.mp4'%}" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
     </div>
   </div>
 </section>
-<section class="product-section2 {% if item.slug == "emax-veneers"%} why-emax-veneers-section pt-sm-3 mt-sm-4 mt-md-4 mt-lg-5 {% else %} pt-xl-4 mt-md-5 {% endif %} why-implant-section ">
+<section class="product-section2 pt-xl-4 mt-md-5 why-implant-section">
   <div class="container">
     <h2 class="product-title mb-sm-2 {% if item.slug == "emax-veneers"%} pe-0 pe-lg-0 w-100 {% endif %}">
       {{item.why_heading|safe}}
@@ -79,10 +75,10 @@
     >
       <div class="col-lg-6 col-md-12 mt-1 mt-sm-0 mt-md-0 mt-lg-0 mt-xl-0">
         <img
-          src="{{item.product_image}}"
-          {% comment %} src="{% static 'img/Implant-img.webp' %}" {% endcomment %}
-          class="{% if item.slug == "/implants" %}Implant-img {% else %} emax-img{% endif %} img-fluid"
-          alt="Implant-img"
+          src="{{item.product_image.url}}"
+          {% comment %} class="{% if item.slug == "implants" %}Implant-img{% endif %} img-fluid" {% endcomment %}
+          class="img-fluid"
+          alt="product-section2-img"
           width="651"
           height="652"
         />
@@ -103,7 +99,7 @@
   </div>
 </section>
 <section
-  class="product-section4 product-quality-section {% if item.slug == "crowns-bridges" %}pt-2 pt-sm-0{% endif %}"
+  class="product-section4 product-quality-section "
   id="product-quality-section"
 >
   <img
@@ -113,142 +109,48 @@
     height="568"
     alt="qty-sec-vector"
   />
-  <div class="container pt-md-0 {% if item.slug == "implants" %}pt-lg-3{% elif item.slug == "emax-veneers" %}pt-lg-5 {% elif item.slug == "crowns-bridges"%} pt-lg-1 {% endif %} pt-xl-4 pb-xl-3">
-    <div class="{% if item.slug == "implants" %} pt-0 {% endif %} text-section pt-md-5 pb-md-4 pb-4 pb-sm-4" id="text1">
+  <div class="container pt-md-0 pt-lg-5 pt-xl-4 pb-xl-3">
+    <div class="text-section pt-md-5 pb-md-4 pb-4 pb-sm-4" id="text1">
       <h2 class="product-title quality-section-title">
         {{item.commitment_heading|safe}}
-        {% comment %} Commitment to Perfection in <span>Implant Restorations</span> {% endcomment %}
       </h2>
       <p class="quality-section-description">
         {{item.commitment_description}}
       </p>
     </div>
-    <div
-      class="row justify-content-md-between justify-content-center cards-container"
-    >
+    <div class="row justify-content-md-between justify-content-center cards-container">
     {% for commit in commitmentpoint %}
       <div class="col-lg-4 col-md-6 col-sm-10 col-10 sticky-card" id="card1">
         <div class="card">
           <div class="card-header">
             <img
-              src="{% static '/img/01.svg' %}"
+              src={{commit.point_image.url}}
               class="img-fluid"
               width="63"
               height="30"
-              alt="number-01"
+              alt="number-img"
             />
           </div>
           <div class="card-body">
             {{commit.point}}
-            {% comment %} At Ace, every implant case is carefully reviewed to ensure ideal
-            fit, long-term function, and seamless clinical integration. {% endcomment %}
           </div>
         </div>
       </div>
     {% endfor %}
-      {% comment %} <div class="col-lg-4 col-md-6 col-sm-10 col-10 sticky-card" id="card2">
-        <div class="card">
-          <div class="card-header">
-            <img
-              src="{% static '/img/02.svg' %}"
-              class="img-fluid"
-              width="63"
-              height="30"
-              alt="number-02"
-            />
-          </div>
-          <div class="card-body">
-            Our precision-driven CAD/CAM workflows deliver consistent,
-            custom-fit restorations with speed, accuracy, and digital
-            reliability.
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-10 col-10 sticky-card" id="card3">
-        <div class="card">
-          <div class="card-header">
-            <img
-              src="{% static '/img/03.svg' %}"
-              class="img-fluid"
-              width="63"
-              height="30"
-              alt="number-03"
-            />
-          </div>
-          <div class="card-body">
-            We use only FDA-approved, biocompatible materials—trusted for
-            safety, durability, and natural integration with oral tissues.
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-10 col-10 sticky-card" id="card4">
-        <div class="card">
-          <div class="card-header">
-            <img
-              src="{% static '/img/04.svg' %}"
-              class="img-fluid"
-              width="63"
-              height="30"
-              alt="number-04"
-            />
-          </div>
-          <div class="card-body">
-            Each implant restoration undergoes micron-level margin checks to
-            ensure flawless fit and eliminate chairside adjustments.
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-10 col-10 sticky-card" id="card5">
-        <div class="card">
-          <div class="card-header">
-            <img
-              src="{% static '/img/05.svg' %}"
-              class="img-fluid"
-              width="63"
-              height="30"
-              alt="number-05"
-            />
-          </div>
-          <div class="card-body">
-            Ace technicians personally inspect every case to guarantee
-            precision, function, and esthetics meet our perfection standards.
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 col-sm-10 col-10 sticky-card" id="card6">
-        <div class="card">
-          <div class="card-header">
-            <img
-              src="{% static '/img/06.svg'%}"
-              class="img-fluid"
-              width="63"
-              height="30"
-              alt="number-06"
-            />
-          </div>
-          <div class="card-body">
-            All restorations are crafted under ISO-certified systems, reflecting
-            our commitment to global-quality benchmarks and clinical
-            reliability.
-          </div>
-        </div>
-      </div> {% endcomment %}
     </div>
   </div>
 </section>
-<section class="product-section3  {% if item.slug == "implants" %} Implant-solution-section pt-lg-2 pt-xl-0 mt-4 {% elif item.slug == "emax-veneers"%} emax-solution-section {% elif item.slug == "crowns-bridges" %} mt-4 pt-md-1 pt-xl-3 crown-bridge-premier{% endif %} ">
-  <div class="container {% if item.slug == "emax-veneers" %}pt-xl-3{% endif %}">
+<section class="product-section3 pt-lg-2 pt-xl-0 mt-4">
+  <div class="container pt-xl-3">
     <h2 class="product-title mb-sm-1 mb-md-1 {% if item.slug == "emax-veneers" %} w-100 {% endif%}">
       {{item.sub_product_title|safe}}
-      {% comment %} Precision Smart Dental Implant Solutions By
-      <span> Ace Dental Lab</span> {% endcomment %}
     </h2>
-    <p class="product-sub-title {% if item.slug == 'implants' %}mb-lg-0 pb-xl-2{% endif %}">
+    <p class="product-sub-title mb-lg-0 pb-xl-2">
       {{item.sub_product_description}}
     </p>
-    <div class="row justify-content-center gap-5 mt-4 mt-sm-3 mt-xl-4{% if item.slug == "emax-veneers" %}mt-md-4{% elif item.slug == "crowns-bridges" %} mt-lg-4 mx-auto mb-5 pb-xl-3 mt-xl-4 {% endif%}">
-    {% for product in subproduct %}
-      <div class="col-lg-5 col-md-10 p-sm-0 {% if item.slug == "crowns-bridges" %}p-md-0{% endif %}" >
+    <div class="row justify-content-center gap-5 mt-4 mt-sm-3 mt-xl-4">
+    {% for ie1 in subproduct %}
+      <div class="col-lg-5 col-md-10 p-sm-0 p-md-0" >
         <div class="product-card">
           <img
             src="{% static '/img/product-card-img.webp'%}"
@@ -258,62 +160,29 @@
             class="product-card-bg-img img-fluid"
           />
           <div class="product-card-header">
-            <h2 class="mb-0">{{product.title}}</h2>
+            <h2 class="mb-0">{{ie1.title}}</h2>
           </div>
           <div class="product-card-img">
-            <img
-              src="{{product.image}}"
-              {% comment %} src="{% static '/img/Implant-product-img1.webp'%}" {% endcomment %}
+            <img  
+              src="{{ie1.image.url}}"
               width="553"
               height="325"
-              class="z-1 position-relative img-fluid {% if item.slug == "implants" %} full-arch-img {% elif item.slug == "emax-veneers" %} zirconia-crown-img2 {% elif item.slug == "crowns-bridges" %} zirconia-crown-img {% endif %}"
-              alt="{% if item.slug == "implants" %} full-arch-img {% elif item.slug == "emax-veneers" %}zirconia-crown-img2 {% elif item.slug == "crowns-bridges" %} zirconia-crown-img {% endif %}"
+              class="z-1 position-relative img-fluid"
+              alt="card-product-img"
             />
           </div>
-          <div class="product-card-description position-relative mb-2 {% if product.title != "Full-Arch Implant Solutions" or item.slug == "emax-veneers" %} d-flex align-items-center m-auto position-relative mb-2 {% endif %} ">
+          <div class="product-card-description position-relative mb-2 d-flex align-items-center m-auto position-relative mb-2">
             <p class="text-center mb-0">
-              {{product.description}}
+              {{ie1.description}}
             </p>
           </div>
         </div>
       </div>
     {% endfor %}
-      {% comment %} <div class="col-lg-5 col-md-10 p-sm-0">
-        <div class="product-card">
-          <img
-            src="{% static '/img/product-card-img.webp' %}"
-            alt="product-card-bg-img"
-            width="613"
-            height="765"
-            class="product-card-bg-img img-fluid"
-          />
-          <div class="product-card-header">
-            <h2 class="mb-0">Screw-Retained Crowns & Bridges</h2>
-          </div>
-          <div class="product-card-img">
-            <img
-              src="{% static '/img/Implant-product-img2.webp' %}"
-              width="553"
-              height="325"
-              class="zirconia-crown-img2 z-1 position-relative img-fluid"
-              alt="zirconia-crown-img2"
-            />
-          </div>
-          <div
-            class="product-card-description d-flex align-items-center m-auto position-relative mb-2"
-          >
-            <p class="text-center mb-0">
-              Precision-milled zirconia crowns and bridges with a screw-retained
-              implant design offer easy retrievability, exceptional marginal
-              accuracy, and lifelike esthetics.
-            </p>
-          </div>
-        </div>
-      </div> {% endcomment %}
     </div>
   </div>
 </section>
-<section class="product-contact my-5 {% if item.slug == "crowns-bridges"%}crown-bridge-contact {% endif %}">
+<section class="product-contact my-5">
   <video
     autoplay
     loop
@@ -322,13 +191,12 @@
     id="player"
     class="background-video product"
   >
-    <source src="{{item.cta_video}}" type="video/mp4" />
-    {% comment %} <source src="/videos/ADE12.mp4" type="video/mp4" /> {% endcomment %}
+    <source src="{{item.cta_video.url}}" type="video/mp4" />
     <source src="/videos/ADE12.webm" type="video/webm" />
     Your browser does not support the video tag.
   </video>
   <div class="container">
-    <div class="product-contact-content {% if item.slug == "crowns-bridges"%}  crown-bridge-contact-content {% endif %}">
+    <div class="product-contact-content">
       <h2 class="product-title {% if item.slug == "emax-veneers" %} pe-0 w-100 {% endif %}">
         {{item.cta_heading}}
       </h2>
