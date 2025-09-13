@@ -42,30 +42,42 @@ def material(request):
 def product(request):
     return render(request,'product.html')
 
-def singleproduct(request,slug):
-    # products =  Product.objects.filter(slug=slug)
-    # print("products-==================",products)
-    try:
-        products = Product.objects.filter(slug=slug)  # Raises DoesNotExist if not found
-        print("====products",products)
-        for product in products:
-            product_id = product.id
+# def singleproduct(request,slug):
+#     # products =  Product.objects.filter(slug=slug)
+#     # print("products-==================",products)
+#     try:
+#         products = Product.objects.filter(slug=slug)  # Raises DoesNotExist if not found
+#         print("====products",products)
+#         for product in products:
+#             product_id = product.id
 
-        advantages = Advantage.objects.filter(product_id=product_id)
-        commitmentpoint = CommitmentPoint.objects.filter(product_id=product_id)
-        subproduct = SubProduct.objects.filter(product_id = product_id)
-        # product = get_object_or_404(Product,slug=slug)
-        # print("product",slug,products)
-        return render(request,'singleproduct.html',
-                  {'product':products,
-                   'advantages':advantages,
-                   'commitmentpoint':commitmentpoint,
-                   'subproduct':subproduct,
-                   }
-                )
-    except Product.DoesNotExist:
-        product = []  # Or handle it as you wish (return a message, redirect, etc.)
-        return render(request,'error.html')
+#         advantages = Advantage.objects.filter(product_id=product_id)
+#         commitmentpoint = CommitmentPoint.objects.filter(product_id=product_id)
+#         subproduct = SubProduct.objects.filter(product_id = product_id)
+#         # product = get_object_or_404(Product,slug=slug)
+#         # print("product",slug,products)
+#         return render(request,'singleproduct.html',
+#                   {'product':products,
+#                    'advantages':advantages,
+#                    'commitmentpoint':commitmentpoint,
+#                    'subproduct':subproduct,
+#                    }
+#                 )
+#     except Product.DoesNotExist:
+#         product = []  # Or handle it as you wish (return a message, redirect, etc.)
+#         return render(request,'error.html')
+def singleproduct(request, slug):
+    product = get_object_or_404(Product, slug=slug)
+    advantages = Advantage.objects.filter(product=product)
+    commitmentpoint = CommitmentPoint.objects.filter(product=product)
+    subproduct = SubProduct.objects.filter(product=product)
+
+    return render(request, 'singleproduct.html', {
+        'product': product,
+        'advantages': advantages,
+        'commitmentpoint': commitmentpoint,
+        'subproduct': subproduct,
+    })
  
 def blog(request):
     return render(request,'blog.html')
