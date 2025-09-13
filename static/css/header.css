@@ -184,9 +184,6 @@ body:has(.offcanvas.show) {
     margin-left: auto;
     display: flex;
   }
-  .sticky-button{
-    
-  }
 }
 @media (max-width: 576px) {
   .container-fluid {
@@ -198,6 +195,7 @@ body:has(.offcanvas.show) {
   .navbar-container {
     margin: 14px auto 14px;
   }
+
 }
 
 /* footer css */
@@ -488,7 +486,6 @@ body:has(.offcanvas.show) {
         background-image: url('/static/img/bgfooter1.webp');
     }
 }
-
 @media(max-width:576px){
     .footer-title{
         line-height: 1.5;
@@ -497,7 +494,9 @@ body:has(.offcanvas.show) {
         display: block !important;
     }
     .footer-wrapper img{
-        margin-bottom: 10px;
+        margin-bottom: 14px;
     }
-   
+    .footer .container{
+      padding: 0px;
+    }
 }

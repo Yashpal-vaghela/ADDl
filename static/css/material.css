@@ -38,17 +38,17 @@
     margin: 0px auto;
 }
 @media(max-width:1200px){
-    .material-title{
+    /* .material-title{
         font-size: 1.65rem;
-    }
+    } */
     .m-details-right{
         height: 100%;
     }
 }
 @media(max-width:991px){
-    .material-title{
+    /* .material-title{
         font-size: 1.4rem;
-    }
+    } */
     .m-details-right ,
     .m-details-left
     { 
@@ -63,15 +63,18 @@
     .ImageName{
         padding: 25px 40px;
     }
+    .venner-product-img{
+        padding: 0px 0px 30px 0px;
+    }
     .materials-section{
         padding-bottom: 20px;
     }
 }
-@media(max-width:768px){
+/* @media(max-width:768px){
     .material-title{
         font-size: 1.2rem;
     }
-}
+} */
 @media(max-width:576px){
     .m-details-right,
     .m-details-left {

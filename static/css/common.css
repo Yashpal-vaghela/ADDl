@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Raleway, sans-serif;
+}
 /* ------------------ Product page common css ------------------ */
 .bradcrumb-product {
   background-image: url("../img/breadcrumb.webp");
@@ -201,7 +207,7 @@
 }
 @media (max-width: 768px) {
   .parallax .md-landscape-h-600px {
-    height: 400px !important;
+    height: 450px !important;
   }
   .parallax .md-landscape-h-600px .col-xl-5 {
     margin-top: 38%;
@@ -277,7 +283,7 @@
 .heading1 {
   margin-bottom: 2rem;
   font-size: 2.4rem;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.55;
 }
 /* .heading1 strong,.heading1 b{
@@ -289,7 +295,7 @@
   font-weight: 600;
 }
 .hero-subheading {
-  font-size: 16px;
+  font-size: 14px;
   color: #00478a;
   font-weight: bold;
   margin-bottom: 10px;
@@ -424,7 +430,7 @@
 }
 @media(max-width:991px){
   .DW-home {
-    padding-top: 25px;
+    padding-top: 0px;
   }
   .product-section1 .product-vector {
     top: 10%;
@@ -434,9 +440,9 @@
   }
 }
 @media(max-width:768px){
-  .DW-home {
-    padding-top: 80px;
-  }
+  /* .DW-home {
+    padding-top: 0px;
+  } */
   .product-section1 .product-vector {
     top: 20%;
   }
@@ -445,9 +451,11 @@
   }
   .product-title {
     margin-top: 10px;
+    font-size: 22px;
   }
   .product-sub-title{
     font-size: 14px;
+    padding-right: 5px;
   }
 }
 @media(max-width:576px){
