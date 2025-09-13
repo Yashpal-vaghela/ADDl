@@ -130,10 +130,10 @@
   <div class="container pt-md-0 pt-lg-5 pt-xl-4 pb-xl-3">
     <div class="text-section pt-md-5 pb-md-4 pb-4 pb-sm-4" id="text1">
       <h2 class="product-title quality-section-title">
-        {{item.commitment_heading|safe}}
+        {{product.commitment_heading|safe}}
       </h2>
       <p class="quality-section-description">
-        {{item.commitment_description}}
+        {{product.commitment_description}}
       </p>
     </div>
     <div class="row justify-content-md-between justify-content-center cards-container">
@@ -166,7 +166,7 @@
     <p class="product-sub-title mb-lg-0 pb-xl-2">
       {{product.sub_product_description}}
     </p>
-    <div class="row justify-content-center gap-5 mt-4 mt-sm-3 mt-xl-4">
+    <div class="row justify-content-center gap-4 gap-sm-3 mt-4 mt-sm-3 mt-xl-4">
     {% for ie1 in subproduct %}
       <div class="col-lg-5 col-md-10 p-sm-0 p-md-0" >
         <div class="product-card">
@@ -225,7 +225,6 @@
     </div>
   </div>
 </section>
-
 {% endblock %} 
 {% block js %} 
 <script type="application/ld+json">

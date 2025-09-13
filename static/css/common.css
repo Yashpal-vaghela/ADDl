@@ -420,7 +420,7 @@
 }
 @media(min-width:1200px) and (max-width:1299px){
   .DW-home {
-      padding-top: 20px;
+      padding-top: 25px;
   }
 }
 @media(min-width:1600px){
@@ -460,7 +460,7 @@
 }
 @media(max-width:576px){
   .DW-home {
-    padding-top: 50px;
+    padding-top: 5px;
   }
   .product-title{
     margin-top: 10px;
